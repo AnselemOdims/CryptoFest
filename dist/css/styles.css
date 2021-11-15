@@ -982,6 +982,7 @@ section.intro .card h4 {
 section.intro .card .intro-video a {
   text-decoration: underline;
   color: #ec5242;
+  font-weight: bold;
 }
 section.intro .program {
   display: none;
@@ -1125,6 +1126,7 @@ footer .logo-container a div span:last-child {
 footer .rights {
   width: 50%;
   margin-top: 14px;
+  font-family: Lato, monospace;
 }
 footer .rights h6 {
   margin: 0;

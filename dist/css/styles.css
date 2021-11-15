@@ -643,6 +643,42 @@ section .headline .background-img {
   width: 95vw;
   height: 80vh;
 }
+section .headline.about {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(151, 150, 150, 0.226) url("../../assets/images/background/background2.png") no-repeat;
+  background-size: 100vw 100%;
+  padding: 20px;
+  height: 78vh;
+}
+section .headline.about .details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: 10px;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+section .headline.about .details h1 {
+  width: 100%;
+}
+section .headline.about .details p {
+  margin: 5px 0;
+}
+section .headline.about hr {
+  border: none;
+  width: 10%;
+  margin-bottom: 15px;
+  background: #ec5242;
+  border-bottom: solid 2px #ec5242;
+}
 
 .headline-contact {
   position: absolute;

@@ -2,8 +2,7 @@
 @import 'variables';
 
 section.headline-section {
-	.headline.about {
-	}
+  height: 75vh;
 
 	div {
 		height: 0;
@@ -29,6 +28,10 @@ section.headline-section {
 			padding: 15px 20px;
 			margin: 0 auto;
 			transition: box-shadow ease-out 0.5s 0.1s;
+
+      &.first {
+        box-shadow: none;
+      }
 		}
 
 		hr {

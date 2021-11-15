@@ -1,0 +1,169 @@
+/* Primary Colors */
+/* Accent Colors */
+/* Neutral Colors */
+/* button variables */
+/* Grid variables */
+/* Box Shadows */
+/* Font size stack */
+/* Font Weights Stack */
+@font-face {
+  font-family: Cocogoose;
+  src: url("../../assets/Fonts/Cocogoose/Cocogoose Pro Light-trial.ttf") format("truetype");
+}
+@font-face {
+  font-family: YM;
+  src: url("../../assets/Fonts/ym/Youth Memories.otf") format("truetype");
+}
+section.headline-section {
+  height: 75vh;
+}
+section.headline-section div {
+  height: 0;
+}
+section.headline-section div .headline-details.details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 12vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+section.headline-section div .headline-details.details h1 {
+  font-size: 35px;
+  text-align: center;
+  margin: -3px 0;
+}
+section.headline-section div .headline-card {
+  position: absolute;
+  top: 28vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 90%;
+  height: 10%;
+  border: solid 1px #dad6d6;
+  padding: 15px 20px;
+  margin: 0 auto;
+  transition: box-shadow ease-out 0.5s 0.1s;
+}
+section.headline-section div .headline-card.first {
+  box-shadow: none;
+}
+section.headline-section div hr {
+  position: absolute;
+  top: 26vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: none;
+  width: 7%;
+  margin: 0 auto;
+  border-bottom: solid 2px #ec5242;
+}
+
+section.logo-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px 20px 50px;
+  text-align: center;
+  background: #fff;
+}
+section.logo-section h2 {
+  font-weight: 500;
+  width: 60%;
+}
+section.logo-section p {
+  font-size: 12px;
+  line-height: 23px;
+}
+section.logo-section hr {
+  border: none;
+  width: 7%;
+  margin: 0 auto;
+  border-bottom: solid 2px #ec5242;
+}
+section.logo-section .headline-card {
+  border: solid 1px #dad6d6;
+  padding: 30px 100px;
+  margin: 0 auto;
+  transition: box-shadow ease-out 0.5s 0.1s;
+  width: 322px;
+}
+section.logo-section .headline-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
+  cursor: pointer;
+}
+section.logo-section .headline-card img {
+  width: 65px;
+}
+section.logo-section .headline-card a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  margin: 0;
+  color: #272a31;
+}
+section.logo-section .headline-card a div span:first-child {
+  font-size: 36px;
+  font-weight: 500;
+}
+section.logo-section .headline-card a div span:last-child {
+  font-size: 22px;
+}
+section.logo-section.past {
+  border-top: solid 1px #c7c5c5;
+}
+section.logo-section.past h2 {
+  width: 85%;
+}
+section.logo-section.past .headline-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 250px;
+  padding: 0;
+  margin: 20px auto;
+  box-shadow: none;
+  color: #fff;
+}
+section.logo-section.past .headline-card:first-of-type {
+  background: url("../../assets/images/background/headway-F2KRf_QfCqw-unsplash.jpg") no-repeat;
+  background-size: 100vw 100%;
+}
+section.logo-section.past .headline-card:last-of-type {
+  background: url("../../assets/images/background/alexandre-pellaes-6vAjp0pscX0-unsplash.jpg") no-repeat;
+  background-size: 100vw 100%;
+}
+section.logo-section.past .headline-card div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #ec200e73;
+  width: 100%;
+  height: 100%;
+}
+section.logo-section.past .headline-card h3 {
+  font-size: 40px;
+  margin: 0;
+}
+section.logo-section.past .headline-card p {
+  font-weight: 500;
+}
+
+footer {
+  padding-bottom: 26px;
+  background: #f8f9f9;
+}
+
+/*# sourceMappingURL=about.css.map */

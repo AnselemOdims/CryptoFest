@@ -102,8 +102,9 @@ section.partner {
   font-family: Lato, monospace;
 
   h2 {
-    color:  $neutral-color-9;
+    color: $neutral-color-9;
   }
+
   .partners {
     @include display(row, space-around, center);
 
@@ -147,10 +148,11 @@ section.reminder {
         box-shadow: $shadow-1;
         font-weight: font($font-weights, extra-medium);
       }
-       small {
-         font-size: 12px;
-         color: $white-color;
-       }
+
+      small {
+        font-size: 12px;
+        color: $white-color;
+      }
     }
   }
 
@@ -161,21 +163,21 @@ section.reminder {
     font-weight: font($font-weights, bolder);
   }
 
-  @include responsive(550px){
+  @include responsive(550px) {
     & {
       padding: 5px 20px;
 
-    div {
-      @include display(row, center, center);
+      div {
+        @include display(row, center, center);
 
-     &.reminder-cards {
-       margin-left: 0;
-     }
+        &.reminder-cards {
+          margin-left: 0;
+        }
 
-      .time {
-        width: 80px;
+        .time {
+          width: 80px;
+        }
       }
     }
   }
-  };
 }

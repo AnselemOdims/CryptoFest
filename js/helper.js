@@ -1,12 +1,11 @@
+// eslint-disable-next-line import/no-cycle
 import { modalDisplay, modalContainer } from './utils.js';
-// import data from './speakerData.js';
 
 export const hamburger = document.querySelector('.toggle');
 export const intro = document.querySelector('.intro-video');
 export const btns = document.querySelectorAll('.btn');
 
 const hide = document.querySelectorAll('.hide');
-
 
 /**
  * @function clickHandler - Handles click event to open the hamburger menu
@@ -108,8 +107,17 @@ export const formHandler = () => {
   }
 };
 
+/**
+ * @function displayHTML
+ * @param {string} src1 the first images source url
+ * @param {string} src2 the second image source url
+ * @param {string} name the speaker's name
+ * @param {string} det1 the first details of the speaker
+ * @param {string} det2 he second details of the speakers
+ * @returns HTML string
+ */
 export function displayHtml(src1, src2, name, det1, det2) {
-	return `
+  return `
   <li class="card">
   <div class="card-images">
     <img src=${src1} alt="transparent image" />
@@ -125,12 +133,18 @@ export function displayHtml(src1, src2, name, det1, det2) {
   `;
 }
 
+/**
+ * @function renderHelper
+ * @param {array} collection  collection of speakers' details
+ * @returns HTML list
+ */
 export function renderHelper(collection) {
-	return collection
-		.map((item) => {
-			const { imgSrc1, imgSrc2, name, details1, details2 } = item;
-			return displayHtml(imgSrc1, imgSrc2, name, details1, details2);
-		})
-		.join('');
+  return collection
+    .map((item) => {
+      const {
+        imgSrc1, imgSrc2, name, details1, details2,
+      } = item;
+      return displayHtml(imgSrc1, imgSrc2, name, details1, details2);
+    })
+    .join('');
 }
-

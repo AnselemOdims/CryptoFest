@@ -1,10 +1,11 @@
-const hamburger = document.querySelectorAll('.toggle');
-import { timer } from './timer.js';
+import timer from './timer.js';
 
-const clickHandler = (e) => {
-	document.querySelector('body').insertAdjacentHTML(
-		'beforeend',
-		`
+const hamburger = document.querySelectorAll('.toggle');
+
+const clickHandler = () => {
+  document.querySelector('body').insertAdjacentHTML(
+    'beforeend',
+    `
   <div class="hamburger-menu">
   <div class="close">
   <img src="assets/images/icons/close_black.svg" />
@@ -17,16 +18,16 @@ const clickHandler = (e) => {
   <li><a href="">Crypto Summit</a></li>
 </ul>
 </div>
-  `
-	);
+  `,
+  );
 
-	document.querySelector('.hamburger-menu').classList.add('show');
-	document.querySelector('.close').addEventListener('click', () => {
-		document.querySelector('.hamburger-menu').classList.remove('show');
-	});
+  document.querySelector('.hamburger-menu').classList.add('show');
+  document.querySelector('.close').addEventListener('click', () => {
+    document.querySelector('.hamburger-menu').classList.remove('show');
+  });
 };
 
 hamburger.forEach((elem) => elem.addEventListener('click', clickHandler));
 
-// handles timer 
+// handles timer
 setInterval(timer, 1000);

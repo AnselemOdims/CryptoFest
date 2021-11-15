@@ -1,57 +1,4 @@
 /* Headline Section */
-section {
-  // height: 75vh;
-
-  .headline {
-    @include dimension(100%, 75vh);
-    @include position(relative, 0, 0, 0, 0);
-
-    background: rgba(151, 150, 150, 0.226) url('../../assets/images/background/background1.png') no-repeat;
-    background-size: 100vw 100%;
-    color: $neutral-color-4;
-    height: 75vh;
-
-    .background-img {
-      @include position(absolute, 6px, 20px, 10px, 20px);
-      @include dimension(95vw, 80vh);
-    }
-
-    &.about {
-      @include position(relative, 0, 0, 0, 0);
-      background: rgba(151, 150, 150, 0.226)
-        url('../../assets/images/background/background2.png') no-repeat;
-      background-size: 100vw 100%;
-  
-      // background: rgba(0, 0, 0, 0.062);
-      padding: 20px;
-      height: 78vh;
-  
-      .details {
-        @include display(column, center, center);
-        @include position(relative, 10px, 50px, 0, 0);
-  
-        text-align: center;
-  
-        h1 {
-          width: 100%;
-        }
-  
-        p {
-          margin: 5px 0;
-        }
-      }
-  
-      hr {
-        border: none;
-        width: 10%;
-        margin-bottom: 15px;
-        background: $primary-color-1;
-        border-bottom: solid 2px $primary-color-1;
-      }
-    }
-  }
-}
-
 .headline-contact {
   @include position(absolute, 64vh, 0, 0, 0);
 
@@ -155,6 +102,59 @@ section {
       h1 {
         font-size: 48px;
         width: 90%;
+      }
+    }
+  }
+}
+
+section {
+  .headline {
+    @include dimension(100%, 75vh);
+    @include position(relative, 0, 0, 0, 0);
+
+    background: rgba(151, 150, 150, 0.226) url('../../assets/images/background/background1.png') no-repeat;
+    background-size: 100vw 100%;
+    color: $neutral-color-4;
+    height: 75vh;
+
+    .background-img {
+      @include position(absolute, 6px, 20px, 10px, 20px);
+      @include dimension(95vw, 80vh);
+    }
+
+    &.about {
+      @include position(relative, 0, 0, 0, 0);
+
+      background:
+        rgba(151, 150, 150, 0.226)
+        url('../../assets/images/background/background2.png') no-repeat;
+      background-size: 100vw 100%;
+
+      // background: rgba(0, 0, 0, 0.062);
+      padding: 20px;
+      height: 78vh;
+
+      .details {
+        @include display(column, center, center);
+        @include position(relative, 10px, 50px, 0, 0);
+
+        text-align: center;
+
+        h1 {
+          width: 100%;
+        }
+
+        p {
+          margin: 5px 0;
+        }
+      }
+
+      hr {
+        border: none;
+        width: 10%;
+        margin-bottom: 15px;
+        background: $primary-color-1;
+        border-bottom: solid 2px $primary-color-1;
       }
     }
   }

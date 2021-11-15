@@ -7,22 +7,36 @@
   overflow: hidden;
   font-family: Lato, monospace;
 
+  .video {
+    .close-modal {
+      @include display(row, flex-end, center);
+      @include position(relative, 20px, unset, unset, 20px);
+
+      img {
+        width: 26px;
+      }
+    }
+
+    iframe {
+      @include position(fixed, 20%, 10%, 5%, 0);
+
+      width: 90%;
+    }
+  }
 
   .modal {
     @include display(column, center, unset);
     @include dimension(320px, unset);
-    @include position(fixed, -100vh, unset, 20%, unset);
+    @include position(fixed, -100vh, unset, 6%, 6%);
 
     margin: 16% auto;
     background: $neutral-color-7;
     padding: 30px;
-    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
-      rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-      transition: top ease-out 0.5s 0.05s;
+    box-shadow: rgba(255, 255, 255, 0.1) 0 1px 1px 0 inset, rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0 30px 60px -30px;
+    transition: top ease-out 0.5s 0.05s;
 
     &.show {
-      top: 0
+      top: 0;
     }
 
     .heading {
@@ -97,8 +111,9 @@
 
         a {
           &:visited {
-            color: none;
+            color: $accent-color-1;
           }
+
           img {
             width: 30px;
           }
@@ -107,36 +122,20 @@
           img {
             border-radius: 5px;
             padding: 5px;
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-              rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-              rgba(10, 37, 64, 0.35) 0px -2px 6px 0px;
+            box-shadow:
+              rgba(50, 50, 93, 0.25) 0 50px 100px -20px,
+              rgba(0, 0, 0, 0.3) 0 30px 60px -30px,
+              rgba(10, 37, 64, 0.35) 0 -2px 6px 0;
             background: $white-color;
             margin-right: 15px;
             font-size: 12px;
           }
+
           i {
-            font-size: 20px
+            font-size: 20px;
           }
         }
       }
-    }
-  }
-
-  .video {
-
-    .close-modal {
-      @include display(row, flex-end, center);
-      @include position(relative, 20px, unset, unset, 20px);
-
-      img {
-        width: 26px;
-      }
-    }
-
-    iframe {
-      @include position(fixed, 20%, 10%, 5%, 0);
-
-      width: 90%;
     }
   }
 }

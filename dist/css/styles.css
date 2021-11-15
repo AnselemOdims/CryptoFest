@@ -367,6 +367,28 @@ template {
   overflow: hidden;
   font-family: Lato, monospace;
 }
+.modal-container .video .close-modal {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  top: 20px;
+  bottom: unset;
+  left: unset;
+  right: 20px;
+}
+.modal-container .video .close-modal img {
+  width: 26px;
+}
+.modal-container .video iframe {
+  position: fixed;
+  top: 20%;
+  bottom: 10%;
+  left: 5%;
+  right: 0;
+  width: 90%;
+}
 .modal-container .modal {
   display: flex;
   justify-content: center;
@@ -377,12 +399,12 @@ template {
   position: fixed;
   top: -100vh;
   bottom: unset;
-  left: 20%;
-  right: unset;
+  left: 6%;
+  right: 6%;
   margin: 16% auto;
   background: #f3f2f3;
   padding: 30px;
-  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 1px 0 inset, rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0 30px 60px -30px;
   transition: top ease-out 0.5s 0.05s;
 }
 .modal-container .modal.show {
@@ -467,7 +489,7 @@ template {
   margin: 30px 0 0;
 }
 .modal-container .modal form .socials a:visited {
-  color: none;
+  color: #272a31;
 }
 .modal-container .modal form .socials a img {
   width: 30px;
@@ -476,35 +498,13 @@ template {
 .modal-container .modal form .socials a img {
   border-radius: 5px;
   padding: 5px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0 30px 60px -30px, rgba(10, 37, 64, 0.35) 0 -2px 6px 0;
   background: #fff;
   margin-right: 15px;
   font-size: 12px;
 }
 .modal-container .modal form .socials a i {
   font-size: 20px;
-}
-.modal-container .video .close-modal {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: row;
-  position: relative;
-  top: 20px;
-  bottom: unset;
-  left: unset;
-  right: 20px;
-}
-.modal-container .video .close-modal img {
-  width: 26px;
-}
-.modal-container .video iframe {
-  position: fixed;
-  top: 20%;
-  bottom: 10%;
-  left: 5%;
-  right: 0;
-  width: 90%;
 }
 
 /* Header Section */
@@ -621,65 +621,6 @@ header nav .mobile-menu img {
 }
 
 /* Headline Section */
-section .headline {
-  width: 100%;
-  height: 75vh;
-  position: relative;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(151, 150, 150, 0.226) url("../../assets/images/background/background1.png") no-repeat;
-  background-size: 100vw 100%;
-  color: #3e3e3e;
-  height: 75vh;
-}
-section .headline .background-img {
-  position: absolute;
-  top: 6px;
-  bottom: 20px;
-  left: 10px;
-  right: 20px;
-  width: 95vw;
-  height: 80vh;
-}
-section .headline.about {
-  position: relative;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(151, 150, 150, 0.226) url("../../assets/images/background/background2.png") no-repeat;
-  background-size: 100vw 100%;
-  padding: 20px;
-  height: 78vh;
-}
-section .headline.about .details {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-  top: 10px;
-  bottom: 50px;
-  left: 0;
-  right: 0;
-  text-align: center;
-}
-section .headline.about .details h1 {
-  width: 100%;
-}
-section .headline.about .details p {
-  margin: 5px 0;
-}
-section .headline.about hr {
-  border: none;
-  width: 10%;
-  margin-bottom: 15px;
-  background: #ec5242;
-  border-bottom: solid 2px #ec5242;
-}
-
 .headline-contact {
   position: absolute;
   top: 64vh;
@@ -794,6 +735,65 @@ section .headline.about hr {
   }
 }
 
+section .headline {
+  width: 100%;
+  height: 75vh;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(151, 150, 150, 0.226) url("../../assets/images/background/background1.png") no-repeat;
+  background-size: 100vw 100%;
+  color: #3e3e3e;
+  height: 75vh;
+}
+section .headline .background-img {
+  position: absolute;
+  top: 6px;
+  bottom: 20px;
+  left: 10px;
+  right: 20px;
+  width: 95vw;
+  height: 80vh;
+}
+section .headline.about {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(151, 150, 150, 0.226) url("../../assets/images/background/background2.png") no-repeat;
+  background-size: 100vw 100%;
+  padding: 20px;
+  height: 78vh;
+}
+section .headline.about .details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: 10px;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+section .headline.about .details h1 {
+  width: 100%;
+}
+section .headline.about .details p {
+  margin: 5px 0;
+}
+section .headline.about hr {
+  border: none;
+  width: 10%;
+  margin-bottom: 15px;
+  background: #ec5242;
+  border-bottom: solid 2px #ec5242;
+}
+
 section.speakers {
   padding: 20px 26px;
   background: #f8f9f9;
@@ -801,6 +801,31 @@ section.speakers {
 }
 section.speakers h2 {
   color: #242e44;
+}
+section.speakers button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border: solid 1px #404346;
+  margin-top: 25px;
+  padding: 10px 20px;
+  box-shadow: none;
+  color: #3e3e3e;
+  cursor: pointer;
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.8s ease-out;
+  background: #fff;
+  padding: 15px;
+  width: 100%;
+}
+section.speakers button img {
+  margin-left: 20px;
+  transition: transform ease-out 0.3s 0.3s;
+}
+section.speakers button img.switch {
+  transform: rotate(180deg);
 }
 section.speakers ul.card-container {
   display: grid;
@@ -880,31 +905,6 @@ section.speakers ul.card-container li.card .speaker-details p:first-of-type {
 section.speakers ul.card-container li.card .speaker-details hr {
   width: 8%;
   margin: 0;
-}
-section.speakers button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  border: solid 1px #404346;
-  margin-top: 25px;
-  padding: 10px 20px;
-  box-shadow: none;
-  color: #3e3e3e;
-  cursor: pointer;
-  background-size: 200% 100%;
-  background-position: right bottom;
-  transition: all 0.8s ease-out;
-  background: #fff;
-  padding: 15px;
-  width: 100%;
-}
-section.speakers button img {
-  margin-left: 20px;
-  transition: transform ease-out 0.3s 0.3s;
-}
-section.speakers button img.switch {
-  transform: rotate(180deg);
 }
 
 /* Main */

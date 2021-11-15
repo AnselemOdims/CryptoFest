@@ -1,34 +1,38 @@
 @import 'functions';
 @import 'variables';
 
+.logo-section hr {
+  @include hr;
+}
+
 section.headline-section {
   height: 75vh;
   font-family: Lato, monospace;
 
-	div {
-		height: 0;
+  div {
+    height: 0;
 
-		.headline-details.details {
-			@include display(column, center, center);
-			@include position(absolute, 15vh, 0, 0, 0);
+    .headline-details.details {
+      @include display(column, center, center);
+      @include position(absolute, 15vh, 0, 0, 0);
 
-			text-align: center;
+      text-align: center;
 
-			h1 {
-				font-size: 35px;
-				text-align: center;
-				margin: -3px 0;
-			}
-		}
+      h1 {
+        font-size: 35px;
+        text-align: center;
+        margin: -3px 0;
+      }
+    }
 
-		.headline-card {
-			@include position(absolute, 32vh, 0, 0, 0);
-			@include dimension(90%, 10%);
+    .headline-card {
+      @include position(absolute, 32vh, 0, 0, 0);
+      @include dimension(90%, 10%);
 
-			border: solid 1px rgb(218, 214, 214);
-			padding: 12px 20px;
-			margin: 0 auto;
-			transition: box-shadow ease-out 0.5s 0.1s;
+      border: solid 1px rgb(218, 214, 214);
+      padding: 12px 20px;
+      margin: 0 auto;
+      transition: box-shadow ease-out 0.5s 0.1s;
 
       &.first {
         box-shadow: none;
@@ -37,128 +41,128 @@ section.headline-section {
           margin: 6px;
         }
       }
-		}
+    }
 
-		hr {
-			@include position(absolute, 30vh, 0, 0, 0);
-			@include hr;
+    hr {
+      @include position(absolute, 30vh, 0, 0, 0);
+      @include hr;
 
-      @include max-responsive(368px){
+      @include max-responsive(368px) {
         display: none;
       }
-		}
-	}
+    }
+  }
 }
 
 section.logo-section {
-	@include display(column, center, center);
+  @include display(column, center, center);
+
   font-family: Lato, monospace;
+  padding: 15px 20px 50px;
+  text-align: center;
+  background: $white-color;
 
-	padding: 15px 20px 50px;
-	text-align: center;
-	background: $white-color;
+  h2 {
+    font-weight: 500;
+    width: 60%;
+  }
 
-	h2 {
-		font-weight: 500;
-		width: 60%;
-	}
-	p {
-		font-size: 12px;
-		line-height: 19px;
-	}
+  p {
+    font-size: 12px;
+    line-height: 19px;
+  }
 
-	hr {
-		@include hr;
-	}
+  .headline-card {
+    border: solid 1px rgb(218, 214, 214);
+    padding: 30px 100px;
+    margin: 0 auto;
+    transition: box-shadow ease-out 0.5s 0.1s;
+    width: 322px;
 
-	.headline-card {
-		border: solid 1px rgb(218, 214, 214);
-		padding: 30px 100px;
-		margin: 0 auto;
-		transition: box-shadow ease-out 0.5s 0.1s;
-		width: 322px;
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.35) 0 5px 5px;
+      cursor: pointer;
+    }
 
-		&:hover {
-			box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
-			cursor: pointer;
-		}
+    img {
+      width: 65px;
+    }
 
-		img {
-			width: 65px;
-		}
+    a {
+      @include display(row, center, center);
 
-		a {
-			@include display(row, center, center);
+      width: 100%;
+      margin: 0;
+      color: $accent-color-1;
 
-			width: 100%;
-			margin: 0;
-			color: $accent-color-1;
-
-			div {
-				span {
-					&:first-child {
+      div {
+        span {
+          &:first-child {
             @include font-face('../../assets/Fonts/ym/Youth\ Memories.otf', YM);
 
-						font-size: 36px;
-						font-weight: font($font-weights, medium);
-					}
-					&:last-child {
-						font-size: font($font-size, mini);
-					}
-				}
-			}
-		}
-	}
+            font-size: 36px;
+            font-weight: font($font-weights, medium);
+          }
 
-	&.past {
-		border-top: solid 1px rgb(199, 197, 197);
+          &:last-child {
+            font-size: font($font-size, mini);
+          }
+        }
+      }
+    }
+  }
 
-		h2 {
-			width: 85%;
-		}
+  &.past {
+    border-top: solid 1px rgb(199, 197, 197);
 
-		.headline-card {
-			@include display(column, center, center);
-			@include dimension(100%, 250px);
+    h2 {
+      width: 85%;
+    }
 
-			padding: 0;
-			margin: 20px auto;
-			box-shadow: none;
-			color: $white-color;
+    .headline-card {
+      @include display(column, center, center);
+      @include dimension(100%, 250px);
 
-			&:first-of-type {
-				background: url('../../assets/images/background/headway-F2KRf_QfCqw-unsplash.jpg')
-					no-repeat;
-				background-size: 100vw 100%;
-			}
-			&:last-of-type {
-				background: url('../../assets/images/background/alexandre-pellaes-6vAjp0pscX0-unsplash.jpg')
-					no-repeat;
-				background-size: 100vw 100%;
-			}
+      padding: 0;
+      margin: 20px auto;
+      box-shadow: none;
+      color: $white-color;
 
-			div {
-				@include display(column, center, center);
+      &:first-of-type {
+        background:
+          url('../../assets/images/background/headway-F2KRf_QfCqw-unsplash.jpg')
+          no-repeat;
+        background-size: 100vw 100%;
+      }
 
-				background: #ec200e73;
-				width: 100%;
-				height: 100%;
-			}
+      &:last-of-type {
+        background:
+          url('../../assets/images/background/alexandre-pellaes-6vAjp0pscX0-unsplash.jpg')
+          no-repeat;
+        background-size: 100vw 100%;
+      }
 
-			h3 {
-				font-size: font($font-size, large);
+      div {
+        @include display(column, center, center);
 
-				margin: 0;
-			}
+        background: #ec200e73;
+        width: 100%;
+        height: 100%;
+      }
 
-			p {
-				font-weight: font($font-weights, medium);
-			}
-		}
-	}
+      h3 {
+        font-size: font($font-size, large);
+        margin: 0;
+      }
+
+      p {
+        font-weight: font($font-weights, medium);
+      }
+    }
+  }
 }
 
 footer {
-	padding-bottom: 80px;
-	background: $neutral-color-8;
+  padding-bottom: 80px;
+  background: $neutral-color-8;
 }

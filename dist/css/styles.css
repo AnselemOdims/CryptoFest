@@ -355,6 +355,157 @@ template {
   display: none;
 }
 
+.modal-container {
+  position: fixed;
+  top: -100vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #f1786b54;
+  height: 100vh;
+  z-index: 2;
+  overflow: hidden;
+}
+.modal-container .modal {
+  display: flex;
+  justify-content: center;
+  align-items: unset;
+  flex-direction: column;
+  width: 320px;
+  height: unset;
+  position: fixed;
+  top: -100vh;
+  bottom: unset;
+  left: 20%;
+  right: unset;
+  margin: 16% auto;
+  background: #f3f2f3;
+  padding: 30px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  transition: top ease-out 0.5s 0.05s;
+}
+.modal-container .modal.show {
+  top: 0;
+}
+.modal-container .modal .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: unset;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+.modal-container .modal .heading .close-modal {
+  cursor: pointer;
+}
+.modal-container .modal .heading h2 {
+  color: #272a31;
+}
+.modal-container .modal .heading h2 span {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: -32px;
+  right: unset;
+  width: 30%;
+  padding: 3px 0;
+}
+.modal-container .modal form {
+  display: flex;
+  justify-content: unset;
+  align-items: unset;
+  flex-direction: column;
+  width: 100%;
+}
+.modal-container .modal form label {
+  margin-bottom: 10px;
+}
+.modal-container .modal form input {
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: solid 2px #ec5242;
+  background: unset;
+  height: 0;
+}
+.modal-container .modal form input:focus {
+  outline: none;
+  height: 30px;
+}
+.modal-container .modal form button {
+  border: none;
+  margin-top: 25px;
+  padding: 10px 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 20px 25px -5px, rgba(0, 0, 0, 0.04) 0 10px 10px -5px;
+  color: #fff;
+  cursor: pointer;
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.8s ease-out;
+  background: #ec5242;
+  margin: 0 0 30px;
+  padding: 15px 0;
+}
+.modal-container .modal form .divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.modal-container .modal form .divider p {
+  margin: 0;
+  font-size: 10px;
+  color: #b3b3b2;
+}
+.modal-container .modal form .divider hr {
+  width: 30%;
+}
+.modal-container .modal form .socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 30px 0 0;
+}
+.modal-container .modal form .socials a:visited {
+  color: none;
+}
+.modal-container .modal form .socials a img {
+  width: 30px;
+}
+.modal-container .modal form .socials a i,
+.modal-container .modal form .socials a img {
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px;
+  background: #fff;
+  margin-right: 15px;
+  font-size: 12px;
+}
+.modal-container .modal form .socials a i {
+  font-size: 20px;
+}
+.modal-container .video .close-modal {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  top: 20px;
+  bottom: unset;
+  left: unset;
+  right: 20px;
+}
+.modal-container .video .close-modal img {
+  width: 26px;
+}
+.modal-container .video iframe {
+  position: fixed;
+  top: 20%;
+  bottom: 10%;
+  left: 5%;
+  right: 0;
+  width: 90%;
+}
+
 /* Header Section */
 .logo-container {
   position: relative;

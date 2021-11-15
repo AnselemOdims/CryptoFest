@@ -1,0 +1,101 @@
+/* Header Section */
+header {
+	@include display(column, unset, center);
+
+	z-index: 1;
+	width: 100%;
+
+	nav .desktop-menu,
+	.top-header {
+		display: none;
+	}
+
+	nav {
+		@include display(row, space-between, center);
+		@include dimension(100%, unset);
+
+		padding: 10px 0;
+		background: $white-color;
+		box-shadow: $shadow-1;
+
+		.mobile-menu {
+			@include position(relative, unset, unset, unset, 24px);
+
+			display: flex;
+		}
+
+		.mobile-menu img {
+			width: 30px;
+		}
+	}
+}
+
+.logo-container {
+	@include position(relative, unset, unset, 24px, unset);
+
+	max-width: 75%;
+
+	a {
+		@include display(row, center, center);
+
+		div {
+			@include display(column, center, unset);
+
+			color: $neutral-color-5;
+
+			span {
+				&:first-child {
+					@include font-face('../Fonts/', 'Lato');
+
+					font-size: font($font-size, medium);
+					font-weight: thin;
+				}
+
+				&:last-child {
+					font-weight: font($font-weights, medium);
+					font-size: font($font-size, micro);
+				}
+			}
+		}
+	}
+	img {
+		width: 50px;
+	}
+}
+
+.hamburger-menu {
+	@include position(fixed, 0, 0, 200vw, 0);
+	@include dimension(100%, 100vh);
+
+	background-color: $primary-color-1;
+	padding: 25px 25px 50px;
+	transition: left ease-in-out 0.6s 0.05s;
+	z-index: 10;
+
+	.close {
+		@include display(row, flex-end, center);
+
+		img {
+			width: 27px;
+		}
+	}
+
+	&.show {
+		left: 0;
+	}
+
+	ul {
+		list-style: none;
+		margin-top: 46px;
+
+		li {
+			margin-bottom: 40px;
+
+			a {
+				@include font-stack(Poppins, sans-serif, normal, 600, 32px, 44px);
+
+				color: $accent-color-2;
+			}
+		}
+	}
+}

@@ -569,7 +569,7 @@ section .headline .background-img {
   border-left: solid 3px #ec5242;
   margin: 0 12px 0;
 }
-.headline-details .headline-button {
+.headline-details .headline-button, .headline-details section.intro button, section.intro .headline-details button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -588,17 +588,17 @@ section .headline .background-img {
   background-position: right bottom;
   transition: all 0.8s ease-out;
 }
-.headline-details .headline-button:hover {
+.headline-details .headline-button:hover, .headline-details section.intro button:hover, section.intro .headline-details button:hover {
   background-position: left bottom;
   color: #fff;
 }
-.headline-details .headline-button img {
+.headline-details .headline-button img, .headline-details section.intro button img, section.intro .headline-details button img {
   width: 24px;
 }
 @media (min-width: 550px) {
   .headline-details {
     position: absolute;
-    top: 93px;
+    top: 23px;
     bottom: 50px;
     left: 26px;
     right: 50px;
@@ -607,6 +607,106 @@ section .headline .background-img {
     font-size: 48px;
     width: 90%;
   }
+}
+
+/* Main */
+main {
+  position: relative;
+  top: 0;
+  bottom: unset;
+  left: 0;
+  right: 0;
+  margin: 0;
+}
+
+.intro-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 0 20px;
+  color: #fff;
+}
+.intro-heading span {
+  position: relative;
+  top: 0;
+  bottom: 5px;
+  left: unset;
+  right: unset;
+  width: 7%;
+  border-bottom: solid 2px #ec5242;
+  padding: 4px 0;
+}
+
+section.intro {
+  font-family: Lato, monospace;
+  height: 100%;
+  background: #1f2227;
+  padding: 30px 0 20px;
+}
+section.intro .card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 26px;
+}
+section.intro .card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 auto;
+  padding: 10px 15px;
+  background: #4a4e5749;
+  width: 100%;
+  transition: transform ease-out 0.7s 0.08s;
+}
+section.intro .card:hover {
+  border: solid 1px #fff;
+  cursor: pointer;
+  transform: scale(1.03);
+}
+section.intro .card img {
+  width: 40px;
+}
+section.intro .card p {
+  width: 60%;
+  color: #fff;
+  line-height: 20px;
+  font-size: 12px;
+}
+section.intro .card h4 {
+  color: #ec5242;
+  font-size: 14px;
+  margin: auto 10px;
+}
+section.intro .card .intro-video a {
+  text-decoration: underline;
+  color: #ec5242;
+}
+section.intro .program {
+  display: none;
+}
+section.intro button {
+  width: unset;
+  height: 70px;
+  background: linear-gradient(to right, white 50%, #ec5242 50%);
+  margin: 0 auto;
+  border: solid 0 #fff;
+  margin-top: 25px;
+  padding: 10px 20px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
+  color: #fff;
+  cursor: pointer;
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.8s ease-out;
+}
+section.intro button:hover {
+  background-position: left bottom;
+  color: #ec5242;
+  border: solid 2px #ec5242;
 }
 
 /* General page settings */

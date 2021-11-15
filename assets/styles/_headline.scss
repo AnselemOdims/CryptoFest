@@ -116,7 +116,7 @@ section {
 
   @include responsive(550px) {
     & {
-      @include position(absolute, 93px, 50px, 26px, 50px);
+      @include position(absolute, 23px, 50px, 26px, 50px);
 
       h1 {
         font-size: 48px;

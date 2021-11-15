@@ -1,0 +1,96 @@
+/* Main */
+main {
+  @include position(relative, 0, unset, 0, 0);
+
+  margin: 0;
+}
+
+.intro-heading {
+  @include display(column, center, center);
+
+  text-align: center;
+  margin: 0 0 20px;
+  color: $white-color;
+
+  span {
+    @include position(relative, 0, 5px, unset, unset);
+
+    width: 7%;
+    border-bottom: solid 2px $primary-color-1;
+    padding: 4px 0;
+  }
+}
+
+section.intro {
+  font-family: Lato, monospace;
+  height: 100%;
+  background: #1f2227;
+  padding: 30px 0 20px;
+
+  .card-container {
+    @include display-grid($grid-mobile, 20px);
+
+    padding: 26px;
+  }
+
+  .card {
+    @include display(row, space-between, center);
+
+    margin: 0 auto;
+    padding: 10px 15px;
+    background: #4a4e5749;
+    width: 100%;
+    transition: transform ease-out 0.7s 0.08s;
+
+    &:hover {
+      border: solid 1px $white-color;
+      cursor: pointer;
+      transform: scale(1.03);
+    }
+
+    img {
+      width: 40px;
+    }
+
+    p {
+      width: 60%;
+      color: $white-color;
+      line-height: 20px;
+      font-size: 12px;
+    }
+
+    h4 {
+      color: $primary-color-1;
+      font-size: font($font-size, micro);
+      margin: auto 10px;
+    }
+
+    .intro-video {
+      a {
+        text-decoration: underline;
+        color: $primary-color-1;
+      }
+    }
+  }
+
+  .program {
+    display: none;
+  }
+
+  button {
+    @extend .headline-button;
+
+    @include dimension(unset, 70px);
+
+    background: $button-color2;
+    margin: 0 auto;
+
+    @include buttons($border-none, $white-color, $shadow-2);
+
+    &:hover {
+      background-position: left bottom;
+      color: $primary-color-1;
+      border: $button-border1;
+    }
+  }
+}

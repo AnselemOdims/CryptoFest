@@ -1,4 +1,5 @@
 const hamburger = document.querySelectorAll('.toggle');
+import { timer } from './timer.js';
 
 const clickHandler = (e) => {
 	document.querySelector('body').insertAdjacentHTML(
@@ -26,3 +27,6 @@ const clickHandler = (e) => {
 };
 
 hamburger.forEach((elem) => elem.addEventListener('click', clickHandler));
+
+// handles timer 
+setInterval(timer, 1000);

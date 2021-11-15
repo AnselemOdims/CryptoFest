@@ -682,7 +682,7 @@ section .headline.about hr {
 
 .headline-contact {
   position: absolute;
-  top: 60vh;
+  top: 64vh;
   bottom: 0;
   left: 0;
   right: 0;
@@ -709,7 +709,7 @@ section .headline.about hr {
 }
 .headline-card p {
   font-size: 13px;
-  line-height: 26px;
+  line-height: 18px;
   margin: 6px 0;
 }
 

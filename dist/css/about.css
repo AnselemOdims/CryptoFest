@@ -16,6 +16,7 @@
 }
 section.headline-section {
   height: 75vh;
+  font-family: Lato, monospace;
 }
 section.headline-section div {
   height: 0;
@@ -26,7 +27,7 @@ section.headline-section div .headline-details.details {
   align-items: center;
   flex-direction: column;
   position: absolute;
-  top: 12vh;
+  top: 15vh;
   bottom: 0;
   left: 0;
   right: 0;
@@ -39,23 +40,26 @@ section.headline-section div .headline-details.details h1 {
 }
 section.headline-section div .headline-card {
   position: absolute;
-  top: 28vh;
+  top: 32vh;
   bottom: 0;
   left: 0;
   right: 0;
   width: 90%;
   height: 10%;
   border: solid 1px #dad6d6;
-  padding: 15px 20px;
+  padding: 12px 20px;
   margin: 0 auto;
   transition: box-shadow ease-out 0.5s 0.1s;
 }
 section.headline-section div .headline-card.first {
   box-shadow: none;
 }
+section.headline-section div .headline-card.first h4 {
+  margin: 6px;
+}
 section.headline-section div hr {
   position: absolute;
-  top: 26vh;
+  top: 30vh;
   bottom: 0;
   left: 0;
   right: 0;
@@ -64,12 +68,18 @@ section.headline-section div hr {
   margin: 0 auto;
   border-bottom: solid 2px #ec5242;
 }
+@media (max-width: 368px) {
+  section.headline-section div hr {
+    display: none;
+  }
+}
 
 section.logo-section {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: Lato, monospace;
   padding: 15px 20px 50px;
   text-align: center;
   background: #fff;
@@ -80,7 +90,7 @@ section.logo-section h2 {
 }
 section.logo-section p {
   font-size: 12px;
-  line-height: 23px;
+  line-height: 19px;
 }
 section.logo-section hr {
   border: none;
@@ -112,11 +122,13 @@ section.logo-section .headline-card a {
   color: #272a31;
 }
 section.logo-section .headline-card a div span:first-child {
+  font-family: YM;
+  src: url("../../assets/Fonts/ym/Youth Memories.otf");
   font-size: 36px;
   font-weight: 500;
 }
 section.logo-section .headline-card a div span:last-child {
-  font-size: 22px;
+  font-size: 18px;
 }
 section.logo-section.past {
   border-top: solid 1px #c7c5c5;
@@ -162,7 +174,7 @@ section.logo-section.past .headline-card p {
 }
 
 footer {
-  padding-bottom: 26px;
+  padding-bottom: 80px;
   background: #f8f9f9;
 }
 

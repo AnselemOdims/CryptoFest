@@ -3,13 +3,14 @@
 
 section.headline-section {
   height: 75vh;
+  font-family: Lato, monospace;
 
 	div {
 		height: 0;
 
 		.headline-details.details {
 			@include display(column, center, center);
-			@include position(absolute, 12vh, 0, 0, 0);
+			@include position(absolute, 15vh, 0, 0, 0);
 
 			text-align: center;
 
@@ -21,28 +22,37 @@ section.headline-section {
 		}
 
 		.headline-card {
-			@include position(absolute, 28vh, 0, 0, 0);
+			@include position(absolute, 32vh, 0, 0, 0);
 			@include dimension(90%, 10%);
 
 			border: solid 1px rgb(218, 214, 214);
-			padding: 15px 20px;
+			padding: 12px 20px;
 			margin: 0 auto;
 			transition: box-shadow ease-out 0.5s 0.1s;
 
       &.first {
         box-shadow: none;
+
+        h4 {
+          margin: 6px;
+        }
       }
 		}
 
 		hr {
-			@include position(absolute, 26vh, 0, 0, 0);
+			@include position(absolute, 30vh, 0, 0, 0);
 			@include hr;
+
+      @include max-responsive(368px){
+        display: none;
+      }
 		}
 	}
 }
 
 section.logo-section {
 	@include display(column, center, center);
+  font-family: Lato, monospace;
 
 	padding: 15px 20px 50px;
 	text-align: center;
@@ -54,7 +64,7 @@ section.logo-section {
 	}
 	p {
 		font-size: 12px;
-		line-height: 23px;
+		line-height: 19px;
 	}
 
 	hr {
@@ -87,11 +97,13 @@ section.logo-section {
 			div {
 				span {
 					&:first-child {
+            @include font-face('../../assets/Fonts/ym/Youth\ Memories.otf', YM);
+
 						font-size: 36px;
 						font-weight: font($font-weights, medium);
 					}
 					&:last-child {
-						font-size: font($font-size, smaller);
+						font-size: font($font-size, mini);
 					}
 				}
 			}
@@ -147,6 +159,6 @@ section.logo-section {
 }
 
 footer {
-	padding-bottom: 26px;
+	padding-bottom: 80px;
 	background: $neutral-color-8;
 }

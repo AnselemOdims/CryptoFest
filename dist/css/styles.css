@@ -970,6 +970,42 @@ section.intro button:hover {
   border: solid 2px #ec5242;
 }
 
+section.partner {
+  background: #404346;
+  padding: 20px 22px 50px;
+}
+section.partner h2 {
+  color: #b3b3b2;
+}
+section.partner .partners {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  margin: 40px 0 20px;
+  flex-wrap: wrap;
+}
+section.partner .partners .partner-img img {
+  width: 95px;
+  margin: 0 5px;
+}
+@media (min-width: 768px) {
+  section.partner {
+    padding: 20px 42px 50px;
+  }
+  section.partner .partners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  section.partner .partners .partner-img img {
+    margin: 0 20px;
+    width: 120px;
+  }
+}
+
 /* General page settings */
 html {
   -webkit-text-size-adjust: 100%;

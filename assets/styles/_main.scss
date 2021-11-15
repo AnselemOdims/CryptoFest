@@ -94,3 +94,36 @@ section.intro {
     }
   }
 }
+
+section.partner {
+  background: $neutral-color-3;
+  padding: 20px 22px 50px;
+
+  h2 {
+    color:  $neutral-color-9;
+  }
+  .partners {
+    @include display(row, space-around, center);
+
+    width: 100%;
+    margin: 40px 0 20px;
+    flex-wrap: wrap;
+
+    .partner-img img {
+      width: 95px;
+      margin: 0 5px;
+    }
+  }
+
+  @include responsive(768px){
+    padding: 20px 42px 50px;
+    .partners {
+      @include display(row, center, center);
+
+      .partner-img img {
+        margin: 0 20px;
+        width: 120px;
+      }
+    }
+  }
+}

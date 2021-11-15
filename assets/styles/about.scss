@@ -1,0 +1,149 @@
+@import 'functions';
+@import 'variables';
+
+section.headline-section {
+	.headline.about {
+	}
+
+	div {
+		height: 0;
+
+		.headline-details.details {
+			@include display(column, center, center);
+			@include position(absolute, 12vh, 0, 0, 0);
+
+			text-align: center;
+
+			h1 {
+				font-size: 35px;
+				text-align: center;
+				margin: -3px 0;
+			}
+		}
+
+		.headline-card {
+			@include position(absolute, 28vh, 0, 0, 0);
+			@include dimension(90%, 10%);
+
+			border: solid 1px rgb(218, 214, 214);
+			padding: 15px 20px;
+			margin: 0 auto;
+			transition: box-shadow ease-out 0.5s 0.1s;
+		}
+
+		hr {
+			@include position(absolute, 26vh, 0, 0, 0);
+			@include hr;
+		}
+	}
+}
+
+section.logo-section {
+	@include display(column, center, center);
+
+	padding: 15px 20px 50px;
+	text-align: center;
+	background: $white-color;
+
+	h2 {
+		font-weight: 500;
+		width: 60%;
+	}
+	p {
+		font-size: 12px;
+		line-height: 23px;
+	}
+
+	hr {
+		@include hr;
+	}
+
+	.headline-card {
+		border: solid 1px rgb(218, 214, 214);
+		padding: 30px 100px;
+		margin: 0 auto;
+		transition: box-shadow ease-out 0.5s 0.1s;
+		width: 322px;
+
+		&:hover {
+			box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
+			cursor: pointer;
+		}
+
+		img {
+			width: 65px;
+		}
+
+		a {
+			@include display(row, center, center);
+
+			width: 100%;
+			margin: 0;
+			color: $accent-color-1;
+
+			div {
+				span {
+					&:first-child {
+						font-size: 36px;
+						font-weight: font($font-weights, medium);
+					}
+					&:last-child {
+						font-size: font($font-size, smaller);
+					}
+				}
+			}
+		}
+	}
+
+	&.past {
+		border-top: solid 1px rgb(199, 197, 197);
+
+		h2 {
+			width: 85%;
+		}
+
+		.headline-card {
+			@include display(column, center, center);
+			@include dimension(100%, 250px);
+
+			padding: 0;
+			margin: 20px auto;
+			box-shadow: none;
+			color: $white-color;
+
+			&:first-of-type {
+				background: url('../../assets/images/background/headway-F2KRf_QfCqw-unsplash.jpg')
+					no-repeat;
+				background-size: 100vw 100%;
+			}
+			&:last-of-type {
+				background: url('../../assets/images/background/alexandre-pellaes-6vAjp0pscX0-unsplash.jpg')
+					no-repeat;
+				background-size: 100vw 100%;
+			}
+
+			div {
+				@include display(column, center, center);
+
+				background: #ec200e73;
+				width: 100%;
+				height: 100%;
+			}
+
+			h3 {
+				font-size: font($font-size, large);
+
+				margin: 0;
+			}
+
+			p {
+				font-weight: font($font-weights, medium);
+			}
+		}
+	}
+}
+
+footer {
+	padding-bottom: 26px;
+	background: $neutral-color-8;
+}

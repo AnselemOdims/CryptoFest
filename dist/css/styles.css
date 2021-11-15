@@ -761,6 +761,7 @@ section .headline .background-img {
 section.speakers {
   padding: 20px 26px;
   background: #f8f9f9;
+  font-family: Lato, monospace;
 }
 section.speakers h2 {
   color: #242e44;
@@ -973,6 +974,7 @@ section.intro button:hover {
 section.partner {
   background: #404346;
   padding: 20px 22px 50px;
+  font-family: Lato, monospace;
 }
 section.partner h2 {
   color: #b3b3b2;
@@ -990,19 +992,72 @@ section.partner .partners .partner-img img {
   width: 95px;
   margin: 0 5px;
 }
-@media (min-width: 768px) {
-  section.partner {
-    padding: 20px 42px 50px;
+
+section.reminder {
+  position: fixed;
+  top: unset;
+  bottom: 0;
+  left: unset;
+  right: unset;
+  width: 100vw;
+  height: unset;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background: #ec5242;
+  z-index: 1;
+  padding: 5px 3px;
+  font-family: Lato, monospace;
+}
+section.reminder div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 60%;
+}
+section.reminder div .time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50px;
+}
+section.reminder div .time h6 {
+  margin: 0 3px 3px;
+  background: #fff;
+  color: red;
+  font-size: 22px;
+  padding: 5px 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 20px 25px -5px, rgba(0, 0, 0, 0.04) 0 10px 10px -5px;
+  font-weight: 600;
+}
+section.reminder div .time small {
+  font-size: 12px;
+  color: #fff;
+}
+section.reminder span {
+  font-size: 12px;
+  width: 40%;
+  color: #fff;
+  font-weight: 800;
+}
+@media (min-width: 550px) {
+  section.reminder {
+    padding: 5px 20px;
   }
-  section.partner .partners {
+  section.reminder div {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
   }
-  section.partner .partners .partner-img img {
-    margin: 0 20px;
-    width: 120px;
+  section.reminder div.reminder-cards {
+    margin-left: 0;
+  }
+  section.reminder div .time {
+    width: 80px;
   }
 }
 

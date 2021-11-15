@@ -98,6 +98,7 @@ section.intro {
 section.partner {
   background: $neutral-color-3;
   padding: 20px 22px 50px;
+  font-family: Lato, monospace;
 
   h2 {
     color:  $neutral-color-9;
@@ -114,16 +115,66 @@ section.partner {
       margin: 0 5px;
     }
   }
+}
 
-  @include responsive(768px){
-    padding: 20px 42px 50px;
-    .partners {
+section.reminder {
+  @include position(fixed, unset, 0, unset, unset);
+  @include dimension(100vw, unset);
+  @include display(row, space-between, center);
+
+  background: $primary-color-1;
+  z-index: 1;
+  padding: 5px 3px;
+  font-family: Lato, monospace;
+
+  div {
+    @include display(row, space-between, center);
+
+    width: 60%;
+
+    .time {
+      @include display(column, center, center);
+
+      width: 50px;
+
+      h6 {
+        margin: 0 3px 3px;
+        background: $white-color;
+        color: red;
+        font-size: font($font-size, smaller);
+        padding: 5px 10px;
+        box-shadow: $shadow-1;
+        font-weight: font($font-weights, extra-medium);
+      }
+       small {
+         font-size: 12px;
+         color: $white-color;
+       }
+    }
+  }
+
+  span {
+    font-size: 12px;
+    width: 40%;
+    color: $white-color;
+    font-weight: font($font-weights, bolder);
+  }
+
+  @include responsive(550px){
+    & {
+      padding: 5px 20px;
+
+    div {
       @include display(row, center, center);
 
-      .partner-img img {
-        margin: 0 20px;
-        width: 120px;
+     &.reminder-cards {
+       margin-left: 0;
+     }
+
+      .time {
+        width: 80px;
       }
     }
   }
+  };
 }

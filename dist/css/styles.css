@@ -416,12 +416,13 @@ header nav .mobile-menu img {
   color: #676867;
 }
 .logo-container a div span:first-child {
-  font-family: "Lato";
-  src: url("../Fonts/");
+  font-family: YM;
+  src: url("../../assets/Fonts/ym/Youth Memories.otf");
   font-size: 26px;
-  font-weight: thin;
+  font-weight: bold;
 }
 .logo-container a div span:last-child {
+  font-family: Poppins, sans-serif;
   font-weight: 500;
   font-size: 14px;
 }

@@ -45,13 +45,14 @@ header {
 
 			span {
 				&:first-child {
-					@include font-face('../Fonts/', 'Lato');
+          @include font-face('../../assets/Fonts/ym/Youth\ Memories.otf', YM);
 
 					font-size: font($font-size, medium);
-					font-weight: thin;
+					font-weight: bold;
 				}
 
 				&:last-child {
+          font-family: Poppins, sans-serif;
 					font-weight: font($font-weights, medium);
 					font-size: font($font-size, micro);
 				}

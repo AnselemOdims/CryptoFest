@@ -9,4 +9,4 @@ hamburger.addEventListener('click', clickHandler);
 intro.addEventListener('click', introHandler);
 
 // Event listener for form popup
-btns.forEach((btn) => btn.addEventListener('click', formHandler))
+btns.forEach((btn) => btn.addEventListener('click', formHandler));

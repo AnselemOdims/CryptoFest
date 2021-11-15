@@ -1,10 +1,12 @@
 import { modalDisplay, modalContainer } from './utils.js';
+// import data from './speakerData.js';
 
 export const hamburger = document.querySelector('.toggle');
 export const intro = document.querySelector('.intro-video');
 export const btns = document.querySelectorAll('.btn');
 
 const hide = document.querySelectorAll('.hide');
+
 
 /**
  * @function clickHandler - Handles click event to open the hamburger menu
@@ -105,3 +107,30 @@ export const formHandler = () => {
     throw new Error();
   }
 };
+
+export function displayHtml(src1, src2, name, det1, det2) {
+	return `
+  <li class="card">
+  <div class="card-images">
+    <img src=${src1} alt="transparent image" />
+    <img src=${src2} alt="speaker image" />
+  </div>
+  <div class="speaker-details">
+    <h4>${name}</h4>
+    <p>${det1}</p>
+    <span></span>
+    <p>${det2}</p>
+  </div>
+</li>
+  `;
+}
+
+export function renderHelper(collection) {
+	return collection
+		.map((item) => {
+			const { imgSrc1, imgSrc2, name, details1, details2 } = item;
+			return displayHtml(imgSrc1, imgSrc2, name, details1, details2);
+		})
+		.join('');
+}
+

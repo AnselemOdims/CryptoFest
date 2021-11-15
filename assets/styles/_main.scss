@@ -24,8 +24,11 @@ main {
 section.intro {
   font-family: Lato, monospace;
   height: 100%;
-  background: #1f2227;
   padding: 30px 0 20px;
+  background:
+          url('../../assets/images/background/layer4.png')
+          no-repeat;
+  background-size: 100vw 100%;
 
   .card-container {
     @include display-grid($grid-mobile, 20px);

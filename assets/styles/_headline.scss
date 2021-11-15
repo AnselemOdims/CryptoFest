@@ -108,6 +108,10 @@
 }
 
 section {
+  &.hero {
+    height: 75vh;
+  }
+
   .headline {
     @include dimension(100%, 75vh);
     @include position(relative, 0, 0, 0, 0);

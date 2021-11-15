@@ -22,7 +22,7 @@ $white-color: #fff;
 
 /* button variables */
 $button-color1: linear-gradient(to right, $primary-color-1 50%, white 50%);
-$button-color2: linear-gradient(to right,white 50%, $primary-color-1 50%);
+$button-color2: linear-gradient(to right, white 50%, $primary-color-1 50%);
 $button-border1: solid 2px $primary-color-1;
 $button-border2: solid 1px $neutral-color-3;
 $border-none: solid 0 $white-color;
@@ -36,8 +36,8 @@ $grid-extra-large: repeat(5, 1fr);
 /* Box Shadows */
 $shadow-1: rgba(0, 0, 0, 0.1) 0 20px 25px -5px,
   rgba(0, 0, 0, 0.04) 0 10px 10px -5px;
-$shadow-2: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-$shadow-3:  #f36e5fa9 0px 48px 100px 0px;
+$shadow-2: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
+$shadow-3:  #f36e5fa9 0 48px 100px 0;
 
 /* Font size stack */
 $font-size: (
@@ -63,12 +63,7 @@ $font-weights: (
 
 @font-face {
   font-family: Cocogoose;
-  src: url('../../assets/Fonts/Cocogoose/Cocogoose\ Pro-trial.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: Lato;
-  src: url('../../assets/Fonts/Lato/Lato-Black.ttf') format('truetype');
+  src: url('../../assets/Fonts/Cocogoose/Cocogoose\ Pro\ Light-trial.ttf') format('truetype');
 }
 
 @font-face {

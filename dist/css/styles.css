@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 /* Primary Colors */
 /* Accent Colors */
 /* Neutral Colors */
@@ -9,11 +10,7 @@
 /* Font Weights Stack */
 @font-face {
   font-family: Cocogoose;
-  src: url("../../assets/Fonts/Cocogoose/Cocogoose Pro-trial.ttf") format("truetype");
-}
-@font-face {
-  font-family: Lato;
-  src: url("../../assets/Fonts/Lato/Lato-Black.ttf") format("truetype");
+  src: url("../../assets/Fonts/Cocogoose/Cocogoose Pro Light-trial.ttf") format("truetype");
 }
 @font-face {
   font-family: YM;
@@ -359,41 +356,6 @@ template {
 }
 
 /* Header Section */
-header {
-  display: flex;
-  justify-content: unset;
-  align-items: center;
-  flex-direction: column;
-  z-index: 1;
-  width: 100%;
-}
-header nav .desktop-menu,
-header .top-header {
-  display: none;
-}
-header nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  width: 100%;
-  height: unset;
-  padding: 10px 0;
-  background: #fff;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 20px 25px -5px, rgba(0, 0, 0, 0.04) 0 10px 10px -5px;
-}
-header nav .mobile-menu {
-  position: relative;
-  top: unset;
-  bottom: unset;
-  left: unset;
-  right: 24px;
-  display: flex;
-}
-header nav .mobile-menu img {
-  width: 30px;
-}
-
 .logo-container {
   position: relative;
   top: unset;
@@ -428,6 +390,41 @@ header nav .mobile-menu img {
 }
 .logo-container img {
   width: 50px;
+}
+
+header {
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+  width: 100%;
+}
+header nav .desktop-menu,
+header .top-header {
+  display: none;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: unset;
+  padding: 10px 0;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 20px 25px -5px, rgba(0, 0, 0, 0.04) 0 10px 10px -5px;
+}
+header nav .mobile-menu {
+  position: relative;
+  top: unset;
+  bottom: unset;
+  left: unset;
+  right: 24px;
+  display: flex;
+}
+header nav .mobile-menu img {
+  width: 30px;
 }
 
 .hamburger-menu {
@@ -469,6 +466,147 @@ header nav .mobile-menu img {
   font-size: 32px;
   line-height: 44px;
   color: #242e44;
+}
+
+/* Headline Section */
+section {
+  height: 75vh;
+}
+section .headline {
+  width: 100%;
+  height: 75vh;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(151, 150, 150, 0.226) url("../../assets/images/background/background1.png") no-repeat;
+  background-size: 100vw 100%;
+  color: #3e3e3e;
+  height: 75vh;
+}
+section .headline .background-img {
+  position: absolute;
+  top: 6px;
+  bottom: 20px;
+  left: 10px;
+  right: 20px;
+  width: 95vw;
+  height: 80vh;
+}
+
+.headline-contact {
+  position: absolute;
+  top: 60vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 80%;
+  margin: 0 auto;
+}
+.headline-contact p {
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  margin: 3% 0 0;
+}
+.headline-contact p a {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.headline-card {
+  margin-top: 10px;
+  text-align: center;
+  background: #fff;
+  padding: 10px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
+}
+.headline-card p {
+  font-size: 13px;
+  line-height: 26px;
+  margin: 6px 0;
+}
+
+.headline-details {
+  position: relative;
+  top: -450px;
+  bottom: 50px;
+  left: 26px;
+  right: 50px;
+  color: #ec5242;
+  height: 0;
+}
+.headline-details p {
+  font-family: Lato, monospace;
+  font-weight: 400;
+  margin: 12px 0;
+  color: #272a31;
+  font-size: 18px;
+}
+.headline-details p:first-of-type {
+  color: #ec5242;
+}
+.headline-details p:last-of-type {
+  font-family: Cocogoose;
+  src: url("../../assets/Fonts/Cocogoose/Cocogoose Pro Light-trial.ttf");
+  margin: 15px 0;
+}
+.headline-details h1 {
+  font-family: Poppins, sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  margin: 20px 0;
+  width: 90%;
+}
+.headline-details span {
+  font-family: Lato, monospace;
+  font-weight: 600;
+  font-size: 14px;
+  color: #272a31;
+}
+.headline-details span .stroke {
+  border-left: solid 3px #ec5242;
+  margin: 0 12px 0;
+}
+.headline-details .headline-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: unset;
+  height: 55px;
+  background: linear-gradient(to right, #ec5242 50%, white 50%);
+  font-family: Lato, monospace;
+  border: solid 2px #ec5242;
+  margin-top: 25px;
+  padding: 10px 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 20px 25px -5px, rgba(0, 0, 0, 0.04) 0 10px 10px -5px;
+  color: #ec5242;
+  cursor: pointer;
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.8s ease-out;
+}
+.headline-details .headline-button:hover {
+  background-position: left bottom;
+  color: #fff;
+}
+.headline-details .headline-button img {
+  width: 24px;
+}
+@media (min-width: 550px) {
+  .headline-details {
+    position: absolute;
+    top: 93px;
+    bottom: 50px;
+    left: 26px;
+    right: 50px;
+  }
+  .headline-details h1 {
+    font-size: 48px;
+    width: 90%;
+  }
 }
 
 /* General page settings */

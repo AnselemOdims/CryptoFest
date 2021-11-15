@@ -1006,6 +1006,42 @@ section.partner .partners .partner-img img {
   }
 }
 
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  padding: 20px 24px 80px 0;
+}
+footer .logo-container {
+  width: 30%;
+}
+footer .logo-container img {
+  width: 35px;
+}
+footer .logo-container a {
+  justify-content: unset;
+}
+footer .logo-container a div {
+  color: #676867;
+}
+footer .logo-container a div span:first-child {
+  font-size: 15px;
+}
+footer .logo-container a div span:last-child {
+  font-size: 11px;
+}
+footer .rights {
+  width: 50%;
+  margin-top: 14px;
+}
+footer .rights h6 {
+  margin: 0;
+}
+footer .rights p {
+  font-size: 10px;
+}
+
 /* General page settings */
 html {
   -webkit-text-size-adjust: 100%;

@@ -1,0 +1,44 @@
+footer {
+  @include display(row, space-between, flex-start);
+
+  padding: 20px 24px 80px 0;
+
+  .logo-container {
+    width: 30%;
+
+    img {
+      width: 35px;
+    }
+
+    a {
+      justify-content: unset;
+
+      div {
+        color: $neutral-color-5;
+
+        span {
+          &:first-child {
+            font-size: 15px;
+          }
+
+          &:last-child {
+            font-size: 11px;
+          }
+        }
+      }
+    }
+  }
+
+  .rights {
+    width: 50%;
+    margin-top: 14px;
+
+    h6 {
+      margin: 0;
+    }
+
+    p {
+      font-size: 10px;
+    }
+  }
+}

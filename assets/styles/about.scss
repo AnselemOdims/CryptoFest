@@ -75,8 +75,8 @@ section.headline-section {
       }
 
       .headline-card {
-        height: 12%;
-        padding: 10px 20px 20px;
+        height: 208px;
+        padding: 10px 20px 30px;
 
         &.first {
           width: 65%;
@@ -184,6 +184,11 @@ section.logo-section {
       width: 85%;
     }
 
+    div {
+      @include display(column, center, center);
+
+      width: 91%;
+
     .headline-card {
       @include display(column, center, center);
       @include dimension(100%, 250px);
@@ -225,6 +230,7 @@ section.logo-section {
       }
     }
   }
+  }
 
   @include responsive(768px) {
     .hide-p {
@@ -247,10 +253,48 @@ section.logo-section {
         margin-top: 20px;
       }
     }
+
+    &.past {
+      div {
+        @include display(row, center, center);
+
+
+        .headline-card {
+          @include dimension(342px, 191px);
+
+          margin: 10px;
+        }
+      }
+
+      h2 {
+        margin-top: 0;
+      }
+    }
   }
 }
 
 footer {
   padding-bottom: 80px;
   background: $neutral-color-8;
+}
+
+@include responsive(768px) {
+  section.partner{
+    display: none;
+  }
+
+  footer {
+    background: $neutral-color-3;
+    color: $white-color;
+
+    .logo-container {
+      a {
+        div {
+          span {
+            color: $white-color;
+          }
+        }
+      }
+    }
+  }
 }

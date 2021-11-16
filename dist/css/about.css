@@ -94,8 +94,8 @@ section.headline-section div hr {
     margin: -3px 0;
   }
   section.headline-section div .headline-card {
-    height: 12%;
-    padding: 10px 20px 20px;
+    height: 208px;
+    padding: 10px 20px 30px;
   }
   section.headline-section div .headline-card.first {
     width: 65%;
@@ -179,7 +179,14 @@ section.logo-section.past {
 section.logo-section.past h2 {
   width: 85%;
 }
-section.logo-section.past .headline-card {
+section.logo-section.past div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 91%;
+}
+section.logo-section.past div .headline-card {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -191,15 +198,15 @@ section.logo-section.past .headline-card {
   box-shadow: none;
   color: #fff;
 }
-section.logo-section.past .headline-card:first-of-type {
+section.logo-section.past div .headline-card:first-of-type {
   background: url("../../assets/images/background/headway-F2KRf_QfCqw-unsplash.jpg") no-repeat;
   background-size: 100vw 100%;
 }
-section.logo-section.past .headline-card:last-of-type {
+section.logo-section.past div .headline-card:last-of-type {
   background: url("../../assets/images/background/alexandre-pellaes-6vAjp0pscX0-unsplash.jpg") no-repeat;
   background-size: 100vw 100%;
 }
-section.logo-section.past .headline-card div {
+section.logo-section.past div .headline-card div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -208,11 +215,11 @@ section.logo-section.past .headline-card div {
   width: 100%;
   height: 100%;
 }
-section.logo-section.past .headline-card h3 {
+section.logo-section.past div .headline-card h3 {
   font-size: 40px;
   margin: 0;
 }
-section.logo-section.past .headline-card p {
+section.logo-section.past div .headline-card p {
   font-weight: 500;
 }
 @media (min-width: 768px) {
@@ -233,11 +240,39 @@ section.logo-section.past .headline-card p {
   section.logo-section .headline-card a {
     margin-top: 20px;
   }
+  section.logo-section.past div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  section.logo-section.past div .headline-card {
+    width: 342px;
+    height: 191px;
+    margin: 10px;
+  }
+  section.logo-section.past h2 {
+    margin-top: 0;
+  }
 }
 
 footer {
   padding-bottom: 80px;
   background: #f8f9f9;
+}
+
+@media (min-width: 768px) {
+  section.partner {
+    display: none;
+  }
+
+  footer {
+    background: #404346;
+    color: #fff;
+  }
+  footer .logo-container a div span {
+    color: #fff;
+  }
 }
 
 /*# sourceMappingURL=about.css.map */

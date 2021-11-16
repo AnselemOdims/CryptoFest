@@ -96,6 +96,7 @@ section.speakers {
 
           &:last-of-type {
             line-height: 22px;
+            font-size: 14px;
           }
         }
 
@@ -124,10 +125,42 @@ section.speakers {
           margin-top: 24px;
         }
 
+        .card-images {
+          img {
+            &:first-child {
+              @include dimension(90px, 80px);
+            }
+
+            &:last-child {
+              @include dimension(150px, 166px);
+              @include position(relative, -67px, unset, 16px, unset);
+            }
+          }
+        }
+
         .speaker-details {
+          left: 33px;
+
           hr {
             width: 5%;
             margin: 7px 0;
+          }
+
+          h4 {
+            font-size: 1rem;
+          }
+
+          p {
+            &:first-of-type {
+              font-size: 14px;
+              width: 95%;
+            }
+
+            &:last-of-type {
+              font-size: 1rem;
+              line-height: 21px;
+              width: 92%;
+            }
           }
         }
       }

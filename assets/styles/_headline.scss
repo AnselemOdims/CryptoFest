@@ -56,8 +56,9 @@
     }
 
     &:last-of-type {
-      margin: 15px 0;
-      font-weight: 400;
+      margin: 20px 0;
+      font-weight: 900;
+      font-size: 20px;
     }
   }
 
@@ -71,8 +72,8 @@
 
   span {
     font-family: Lato, monospace;
-    font-weight: font($font-weights, extra-medium);
-    font-size: font($font-size, micro);
+    font-weight: 900;
+    font-size: 20px;
     color: $accent-color-1;
 
     .stroke {
@@ -116,7 +117,7 @@
       @include position(absolute, 25px, 50px, 45px, 50px);
 
       h1 {
-        font-size: 56px;
+        font-size: 54px;
       }
     }
   }
@@ -126,7 +127,7 @@
       top: 100px;
 
       h1 {
-        font-size: 56px;
+        font-size: 58px;
       }
     }
   }

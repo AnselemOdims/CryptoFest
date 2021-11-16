@@ -1,11 +1,11 @@
 footer {
   @include display(row, space-between, flex-start);
 
-  padding: 20px 24px 80px 0;
+  padding: 50px 24px 110px 0;
 
   .up {
     position: absolute;
-    bottom: 160px;
+    bottom: 210px;
     right: 26px;
     background: $primary-color-1;
     padding: 10px 15px;
@@ -16,7 +16,7 @@ footer {
     top: 17px;
 
     img {
-      width: 35px;
+      width: 45px;
 
       @include responsive(768px) {
         width: 50px;
@@ -31,11 +31,11 @@ footer {
 
         span {
           &:first-child {
-            font-size: 15px;
+            font-size: 22px;
           }
 
           &:last-child {
-            font-size: 11px;
+            font-size: 12px;
           }
 
           @include responsive(768px) {
@@ -58,31 +58,66 @@ footer {
     font-family: Lato, monospace;
 
     h6 {
-      margin: 0;
+      margin: 0 14px 0;
     }
 
     p {
-      font-size: 10px;
+      display: none;
+    }
+  }
+
+  @include responsive(600px) {
+    justify-content: unset;
+
+    .rights {
+      margin-left: 30px;
+
+      h6 {
+        margin: 0;
+      }
+
+      p {
+        display: block;
+        font-size: 10px;
+      }
     }
   }
 
   @include responsive(768px) {
-    padding: 20px 42px 80px;
+    padding: 50px 42px 120px;
+    justify-content: unset;
+
+    .up {
+      bottom: 230px;
+    }
 
     .rights {
       width: 60%;
+      margin-left: 40px;
+
+      p {
+        display: block;
+        line-height: 18px;
+        font-size: 10px;
+      }
 
       h6 {
         font-size: 12px;
+        margin: 0;
+
+        br {
+          display: none;
+        }
       }
     }
   }
 
   @include responsive(1098px) {
-    padding: 20px 130px 80px;
+    padding: 60px 130px 110px;
 
     .rights {
       width: 60%;
+      margin-left: -20px;
     }
   }
 }

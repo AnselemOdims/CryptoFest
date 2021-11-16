@@ -116,7 +116,7 @@ section.headline-section {
 }
 
 footer {
-  padding-bottom: 80px;
+  padding-bottom: 140px;
   background: $neutral-color-8;
 }
 
@@ -128,6 +128,10 @@ footer {
   footer {
     background: $neutral-color-3;
     color: $white-color;
+
+    .up {
+      bottom: 260px;
+    }
 
     .logo-container {
       a {

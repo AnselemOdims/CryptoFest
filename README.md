@@ -2,6 +2,13 @@
 
 # Crypto Fest
 
+## Project Demo Presentation
+[Loom Demo Link](https://www.loom.com/share/d46868ac76894b449377e2b04f37bd77)
+
+## Live Demo
+
+[View Live Demo](https://anselemodims.github.io/CryptoFest/)
+
 >Complete Project Screenshots
 
 ### Mobile Page

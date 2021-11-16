@@ -803,8 +803,9 @@ header nav .mobile-menu img {
   color: #ec5242;
 }
 .headline-details p:last-of-type {
-  margin: 15px 0;
-  font-weight: 400;
+  margin: 20px 0;
+  font-weight: 900;
+  font-size: 20px;
 }
 .headline-details h1 {
   font-family: Poppins, sans-serif;
@@ -815,8 +816,8 @@ header nav .mobile-menu img {
 }
 .headline-details span {
   font-family: Lato, monospace;
-  font-weight: 600;
-  font-size: 14px;
+  font-weight: 900;
+  font-size: 20px;
   color: #272a31;
 }
 .headline-details span .stroke {
@@ -871,7 +872,7 @@ header nav .mobile-menu img {
     right: 50px;
   }
   .headline-details h1 {
-    font-size: 56px;
+    font-size: 54px;
   }
 }
 @media (min-width: 1024px) {
@@ -879,7 +880,7 @@ header nav .mobile-menu img {
     top: 100px;
   }
   .headline-details h1 {
-    font-size: 56px;
+    font-size: 58px;
   }
 }
 @media (min-width: 1098px) {
@@ -1071,6 +1072,7 @@ section.speakers ul.card-container li.card .speaker-details p:first-of-type {
 }
 section.speakers ul.card-container li.card .speaker-details p:last-of-type {
   line-height: 22px;
+  font-size: 14px;
 }
 section.speakers ul.card-container li.card .speaker-details hr {
   width: 8%;
@@ -1097,9 +1099,37 @@ section.speakers ul.card-container li.card .speaker-details hr {
   section.speakers ul.card-container li.card:nth-child(2) {
     margin-top: 24px;
   }
+  section.speakers ul.card-container li.card .card-images img:first-child {
+    width: 90px;
+    height: 80px;
+  }
+  section.speakers ul.card-container li.card .card-images img:last-child {
+    width: 150px;
+    height: 166px;
+    position: relative;
+    top: -67px;
+    bottom: unset;
+    left: 16px;
+    right: unset;
+  }
+  section.speakers ul.card-container li.card .speaker-details {
+    left: 33px;
+  }
   section.speakers ul.card-container li.card .speaker-details hr {
     width: 5%;
     margin: 7px 0;
+  }
+  section.speakers ul.card-container li.card .speaker-details h4 {
+    font-size: 1rem;
+  }
+  section.speakers ul.card-container li.card .speaker-details p:first-of-type {
+    font-size: 14px;
+    width: 95%;
+  }
+  section.speakers ul.card-container li.card .speaker-details p:last-of-type {
+    font-size: 1rem;
+    line-height: 21px;
+    width: 92%;
   }
   section.speakers button {
     display: none;
@@ -1402,11 +1432,11 @@ footer {
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: row;
-  padding: 20px 24px 80px 0;
+  padding: 50px 24px 110px 0;
 }
 footer .up {
   position: absolute;
-  bottom: 160px;
+  bottom: 210px;
   right: 26px;
   background: #ec5242;
   padding: 10px 15px;
@@ -1416,7 +1446,7 @@ footer .logo-container {
   top: 17px;
 }
 footer .logo-container img {
-  width: 35px;
+  width: 45px;
 }
 @media (min-width: 768px) {
   footer .logo-container img {
@@ -1430,10 +1460,10 @@ footer .logo-container a div {
   color: #676867;
 }
 footer .logo-container a div span:first-child {
-  font-size: 15px;
+  font-size: 22px;
 }
 footer .logo-container a div span:last-child {
-  font-size: 11px;
+  font-size: 12px;
 }
 @media (min-width: 768px) {
   footer .logo-container a div span:first-child {
@@ -1449,28 +1479,58 @@ footer .rights {
   font-family: Lato, monospace;
 }
 footer .rights h6 {
-  margin: 0;
+  margin: 0 14px 0;
 }
 footer .rights p {
-  font-size: 10px;
+  display: none;
+}
+@media (min-width: 600px) {
+  footer {
+    justify-content: unset;
+  }
+  footer .rights {
+    margin-left: 30px;
+  }
+  footer .rights h6 {
+    margin: 0;
+  }
+  footer .rights p {
+    display: block;
+    font-size: 10px;
+  }
 }
 @media (min-width: 768px) {
   footer {
-    padding: 20px 42px 80px;
+    padding: 50px 42px 120px;
+    justify-content: unset;
+  }
+  footer .up {
+    bottom: 230px;
   }
   footer .rights {
     width: 60%;
+    margin-left: 40px;
+  }
+  footer .rights p {
+    display: block;
+    line-height: 18px;
+    font-size: 10px;
   }
   footer .rights h6 {
     font-size: 12px;
+    margin: 0;
+  }
+  footer .rights h6 br {
+    display: none;
   }
 }
 @media (min-width: 1098px) {
   footer {
-    padding: 20px 130px 80px;
+    padding: 60px 130px 110px;
   }
   footer .rights {
     width: 60%;
+    margin-left: -20px;
   }
 }
 

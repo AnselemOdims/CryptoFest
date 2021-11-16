@@ -257,7 +257,7 @@ section.headline-section div hr {
 }
 
 footer {
-  padding-bottom: 80px;
+  padding-bottom: 140px;
   background: #f8f9f9;
 }
 
@@ -269,6 +269,9 @@ footer {
   footer {
     background: #404346;
     color: #fff;
+  }
+  footer .up {
+    bottom: 260px;
   }
   footer .logo-container a div span {
     color: #fff;

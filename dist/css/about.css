@@ -64,6 +64,9 @@ section.headline-section div .headline-card.first {
 section.headline-section div .headline-card.first h4 {
   margin: 6px;
 }
+section.headline-section div .headline-card.first p .hide-p {
+  display: none;
+}
 section.headline-section div hr {
   position: absolute;
   top: 30vh;
@@ -78,6 +81,41 @@ section.headline-section div hr {
 @media (max-width: 368px) {
   section.headline-section div hr {
     display: none;
+  }
+}
+@media (min-width: 768px) {
+  section.headline-section div .headline-details.details h1 {
+    font-size: 50px;
+    text-align: center;
+    margin: -3px 0;
+  }
+  section.headline-section div .headline-card {
+    height: 12%;
+    padding: 10px 20px 20px;
+  }
+  section.headline-section div .headline-card.first {
+    width: 65%;
+  }
+  section.headline-section div .headline-card.first p {
+    line-height: 28px;
+  }
+  section.headline-section div .headline-card.first p .hide-p {
+    display: block;
+  }
+  section.headline-section div hr {
+    top: 28vh;
+    width: 3%;
+  }
+}
+@media (min-width: 1031px) {
+  section.headline-section div .headline-card {
+    padding: 30px;
+  }
+  section.headline-section div .headline-card.first {
+    width: 65%;
+  }
+  section.headline-section div hr {
+    width: 2%;
   }
 }
 

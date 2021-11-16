@@ -40,6 +40,12 @@ section.headline-section {
         h4 {
           margin: 6px;
         }
+
+        p {
+          .hide-p {
+            display: none;
+          }
+        }
       }
     }
 
@@ -49,6 +55,61 @@ section.headline-section {
 
       @include max-responsive(368px) {
         display: none;
+      }
+    }
+  }
+
+  @include responsive(768px) {
+    div {
+
+      .headline-details.details {
+        h1 {
+          font-size: 50px;
+          text-align: center;
+          margin: -3px 0;
+        }
+      }
+
+      .headline-card {
+        height: 12%;
+        padding: 10px 20px 20px;
+
+        &.first {
+          width: 65%;
+
+          p {
+            line-height: 28px;
+
+            .hide-p {
+              display: block;
+            }
+          }
+        }
+      }
+
+      hr {
+        top: 28vh;
+        width: 3%;
+      }
+    }
+  }
+
+  @include responsive(1031px) {
+    div {
+      .headline-card {
+        padding: 30px;
+
+        &.first {
+          width: 65%;
+
+          p {
+
+          }
+        }
+      }
+
+      hr {
+        width: 2%;
       }
     }
   }

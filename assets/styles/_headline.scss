@@ -16,6 +16,12 @@
       font-weight: font($font-weights, extra-medium);
     }
   }
+
+  @include responsive(768px) {
+    p {
+      margin-top: 1%;
+    }
+  }
 }
 
 .headline-card {

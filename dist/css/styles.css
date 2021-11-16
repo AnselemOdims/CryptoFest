@@ -752,6 +752,11 @@ header nav .mobile-menu img {
   text-decoration: underline;
   font-weight: 600;
 }
+@media (min-width: 768px) {
+  .headline-contact p {
+    margin-top: 1%;
+  }
+}
 
 .headline-card {
   margin-top: 10px;

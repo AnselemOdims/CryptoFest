@@ -78,6 +78,11 @@ section.speakers {
 
         h4 {
           margin: 0;
+          transition: transform ease-out 0.8s 0.1s;
+
+          &:hover {
+            transform: scale(1.07);
+          }
         }
 
         p {
@@ -88,6 +93,10 @@ section.speakers {
             color: $primary-color-1;
             font-style: italic;
           }
+
+          &:last-of-type {
+            line-height: 22px;
+          }
         }
 
         hr {
@@ -96,5 +105,40 @@ section.speakers {
         }
       }
     }
+  }
+
+  @include responsive(768px){
+    padding: 20px 42px;
+
+    h2 {
+      text-align: center;
+    }
+
+    ul.card-container {
+      @include display-grid($grid-large, 30px);
+
+      li.card {
+        @include display(row, space-between, unset);
+  
+        &:nth-child(2){
+        margin-top: 24px;
+        }
+
+        .speaker-details {
+
+          hr {
+            width: 5%;
+            margin: 7px 0;
+          }
+        }
+      }
+    }
+    button {
+      display: none;
+    }
+  }
+
+  @include responsive(1098px){
+    padding: 20px 130px;
   }
 }

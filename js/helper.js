@@ -126,7 +126,7 @@ export function displayHtml(src1, src2, name, det1, det2) {
   <div class="speaker-details">
     <h4>${name}</h4>
     <p>${det1}</p>
-    <span></span>
+    <hr>
     <p>${det2}</p>
   </div>
 </li>

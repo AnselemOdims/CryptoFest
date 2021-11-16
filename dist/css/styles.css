@@ -362,7 +362,7 @@ template {
   right: 0;
   background: #f1786b54;
   height: 100vh;
-  z-index: 2;
+  z-index: 10;
   overflow: hidden;
   font-family: Lato, monospace;
 }
@@ -447,10 +447,12 @@ template {
   border-bottom: solid 2px #ec5242;
   background: unset;
   height: 0;
+  transition: border-bottom ease-in-out 0.8s 0.2s;
 }
 .modal-container .modal form input:focus {
   outline: none;
   height: 30px;
+  border-bottom: solid 2px #272a31;
 }
 .modal-container .modal form button {
   border: none;

@@ -96,6 +96,7 @@ export const formHandler = () => {
     `;
 
   modalDisplay(0, '8px');
+  document.querySelector('#name').focus();
   document.querySelector('.modal').classList.add('show');
   try {
     document.querySelector('.close-modal').addEventListener('click', () => {

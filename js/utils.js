@@ -72,6 +72,11 @@ moreBtn.addEventListener('click', () => {
   }
 });
 
+/**
+ * 
+ * @param {HTML Element} elem the HTML element
+ * @returns the page offset
+ */
 function getCoords(elem) {
   const box = elem.getBoundingClientRect();
   return {

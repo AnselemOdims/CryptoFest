@@ -1,0 +1,152 @@
+section.logo-section {
+  @include display(column, center, center);
+
+  font-family: Lato, monospace;
+  padding: 45px 20px 50px;
+  text-align: center;
+  background: $white-color;
+
+  h2 {
+    font-weight: 500;
+    width: 60%;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 19px;
+  }
+
+  .headline-card {
+    border: solid 1px rgb(218, 214, 214);
+    padding: 30px 100px;
+    margin: 0 auto;
+    transition: box-shadow ease-out 0.5s 0.1s;
+    width: 322px;
+
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.35) 0 5px 5px;
+      cursor: pointer;
+    }
+
+    img {
+      width: 65px;
+    }
+
+    a {
+      @include display(row, center, center);
+
+      width: 100%;
+      margin: 0;
+      color: $accent-color-1;
+
+      div {
+        span {
+          &:first-child {
+            @include font-face('../../assets/Fonts/ym/Youth\ Memories.otf', YM);
+
+            font-size: 36px;
+            font-weight: font($font-weights, medium);
+          }
+
+          &:last-child {
+            font-size: font($font-size, mini);
+          }
+        }
+      }
+    }
+  }
+
+  &.past {
+    border-top: solid 1px rgb(199, 197, 197);
+
+    h2 {
+      width: 85%;
+    }
+
+    .headline-container {
+      @include display(column, center, center);
+
+      width: 91%;
+
+      .headline-card {
+        @include display(column, center, center);
+        @include dimension(100%, 250px);
+
+        padding: 0;
+        margin: 20px auto;
+        box-shadow: none;
+        color: $white-color;
+
+        &:first-of-type {
+          background:
+            url('../../assets/images/background/headway-F2KRf_QfCqw-unsplash.jpg')
+            no-repeat;
+          background-size: 100vw 100%;
+        }
+
+        &:last-of-type {
+          background:
+            url('../../assets/images/background/alexandre-pellaes-6vAjp0pscX0-unsplash.jpg')
+            no-repeat;
+          background-size: 100vw 100%;
+        }
+
+        div {
+          @include display(column, center, center);
+
+          background: #ec200e73;
+          width: 100%;
+          height: 100%;
+        }
+
+        h3 {
+          font-size: font($font-size, large);
+          margin: 0;
+        }
+
+        p {
+          font-weight: font($font-weights, medium);
+        }
+      }
+    }
+  }
+
+  @include responsive(768px) {
+    .hide-p {
+      display: block;
+    }
+
+    p {
+      width: 50%;
+      margin-bottom: 25px;
+    }
+
+    hr {
+      width: 2%;
+    }
+
+    .headline-card {
+      @include dimension(488px, 177px);
+
+      a {
+        margin-top: 20px;
+      }
+    }
+
+    &.past {
+      .headline-container {
+        @include display(row, center, center);
+
+        .headline-card {
+          @include dimension(342px, 191px);
+
+          margin: 10px;
+        }
+      }
+
+      h2 {
+        margin-top: 0;
+      }
+    }
+  }
+}

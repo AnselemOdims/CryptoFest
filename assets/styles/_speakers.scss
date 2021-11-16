@@ -1,0 +1,177 @@
+section.speakers {
+  padding: 20px 26px;
+  background: $neutral-color-8;
+  font-family: Lato, monospace;
+
+  h2 {
+    color: $accent-color-2;
+  }
+
+  button {
+    @include display(row, center, center );
+    @include buttons($button-border2, $neutral-color-4, none);
+
+    background: $white-color;
+    padding: 15px;
+    width: 100%;
+
+    img {
+      margin-left: 20px;
+      transition: transform ease-out 0.3s 0.3s;
+    }
+
+    img.switch {
+      transform: rotate(180deg);
+    }
+  }
+
+  ul.card-container {
+    @include display-grid($grid-mobile, 30px);
+
+    padding: 0;
+
+    li.card {
+      @include display(row, space-between, unset);
+
+      &:first-child {
+        margin-top: 24px;
+      }
+
+      &:nth-child(even) {
+        @include position(relative, unset, unset, -100vw, unset);
+
+        transition: left ease-out 1s 0.5s;
+      }
+
+      &:nth-child(odd) {
+        @include position(relative, unset, unset, unset, -100vw);
+
+        transition: right ease-out 1s 0.5s;
+      }
+
+      .card-images {
+        @include position(relative, 0, unset, unset, unset);
+
+        img {
+          &:first-child {
+            @include dimension(60px, 57px);
+          }
+
+          &:last-child {
+            @include position(relative, -50px, unset, 11px, unset);
+            @include dimension(110px, 110px);
+
+            transition: transform ease-out 0.8s 0.1s;
+
+            &:hover {
+              transform: scale(1.07);
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .speaker-details {
+        @include position(relative, 0, 0, 12px, 0);
+
+        width: 90%;
+
+        h4 {
+          margin: 0;
+          transition: transform ease-out 0.8s 0.1s;
+
+          &:hover {
+            transform: scale(1.07);
+          }
+        }
+
+        p {
+          font-size: 12px;
+          margin: 7px 0;
+
+          &:first-of-type {
+            color: $primary-color-1;
+            font-style: italic;
+          }
+
+          &:last-of-type {
+            line-height: 22px;
+            font-size: 14px;
+          }
+        }
+
+        hr {
+          width: 8%;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  @include responsive(768px) {
+    padding: 20px 42px;
+
+    h2 {
+      text-align: center;
+    }
+
+    ul.card-container {
+      @include display-grid($grid-large, 30px);
+
+      li.card {
+        @include display(row, space-between, unset);
+
+        &:nth-child(2) {
+          margin-top: 24px;
+        }
+
+        .card-images {
+          img {
+            &:first-child {
+              @include dimension(90px, 80px);
+            }
+
+            &:last-child {
+              @include dimension(150px, 166px);
+              @include position(relative, -67px, unset, 16px, unset);
+            }
+          }
+        }
+
+        .speaker-details {
+          left: 33px;
+
+          hr {
+            width: 5%;
+            margin: 7px 0;
+          }
+
+          h4 {
+            font-size: 1rem;
+          }
+
+          p {
+            &:first-of-type {
+              font-size: 14px;
+              width: 95%;
+            }
+
+            &:last-of-type {
+              font-size: 1rem;
+              line-height: 21px;
+              width: 92%;
+            }
+          }
+        }
+      }
+    }
+
+    button {
+      display: none;
+    }
+  }
+
+  @include responsive(1098px) {
+    padding: 20px 130px;
+  }
+}

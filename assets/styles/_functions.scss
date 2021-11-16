@@ -1,0 +1,83 @@
+@function font($type, $name) {
+  @return map-get($type, $name);
+}
+
+@mixin display($direction, $justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin font-stack($family1, $family2, $style, $weight, $size, $height) {
+  font-family: $family1, $family2;
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+}
+
+@mixin theme($dark-theme: true) {
+  @if ($dark-theme) {
+    background: darken($primary-color-1, 45%);
+  }
+}
+
+@mixin responsive($min-width) {
+  @media (min-width: $min-width) {
+    @content;
+  }
+}
+
+@mixin max-responsive($max-width) {
+  @media (max-width: $max-width) {
+    @content;
+  }
+}
+
+@mixin position($position, $top, $bottom, $left, $right) {
+  position: $position;
+  top: $top;
+  bottom: $bottom;
+  left: $left;
+  right: $right;
+}
+
+@mixin dimension($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin buttons($button-border, $color, $shadow) {
+  border: $button-border;
+  margin-top: 25px;
+  padding: 10px 20px;
+  box-shadow: $shadow;
+  color: $color;
+  cursor: pointer;
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.8s ease-out;
+}
+
+@mixin display-grid($column, $gap) {
+  display: grid;
+  grid-template-columns: $column;
+  gap: $gap;
+}
+
+@function my-calc($initial, $added) {
+  @return $initial + $added;
+}
+
+@mixin hr {
+  border: none;
+  width: 7%;
+  margin: 0 auto;
+  border-bottom: solid 2px $primary-color-1;
+}
+
+@mixin font-face($path, $family) {
+  font-family: $family;
+  src: url($path);
+}

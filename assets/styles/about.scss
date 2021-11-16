@@ -1,0 +1,146 @@
+@import 'functions';
+@import 'variables';
+@import 'logo';
+
+.logo-section hr {
+  @include hr;
+}
+
+.hide-p {
+  display: none;
+}
+
+section.headline-section {
+  height: 75vh;
+  font-family: Lato, monospace;
+
+  div {
+    height: 0;
+
+    .headline-details.details {
+      @include display(column, center, center);
+      @include position(absolute, 15vh, 0, 0, 0);
+
+      text-align: center;
+
+      h1 {
+        font-size: 37px;
+        text-align: center;
+        margin: -3px 0;
+      }
+    }
+
+    .headline-card {
+      @include position(absolute, 32vh, 0, 0, 0);
+      @include dimension(90%, 10%);
+
+      border: solid 1px rgb(218, 214, 214);
+      padding: 12px 20px;
+      margin: 0 auto;
+      transition: box-shadow ease-out 0.5s 0.1s;
+
+      &.first {
+        box-shadow: none;
+
+        h4 {
+          margin: 6px;
+        }
+
+        p {
+          .hide-p {
+            display: none;
+          }
+        }
+      }
+    }
+
+    hr {
+      @include position(absolute, 30vh, 0, 0, 0);
+      @include hr;
+
+      @include max-responsive(368px) {
+        display: none;
+      }
+    }
+  }
+
+  @include responsive(768px) {
+    div {
+      .headline-details.details {
+        h1 {
+          font-size: 50px;
+          text-align: center;
+          margin: -3px 0;
+        }
+      }
+
+      .headline-card {
+        height: 208px;
+        padding: 10px 20px 30px;
+
+        &.first {
+          width: 65%;
+
+          p {
+            line-height: 28px;
+
+            .hide-p {
+              display: block;
+            }
+          }
+        }
+      }
+
+      hr {
+        top: 28vh;
+        width: 3%;
+      }
+    }
+  }
+
+  @include responsive(1031px) {
+    div {
+      .headline-card {
+        padding: 30px;
+
+        &.first {
+          width: 65%;
+        }
+      }
+
+      hr {
+        width: 2%;
+      }
+    }
+  }
+}
+
+footer {
+  padding-bottom: 140px;
+  background: $neutral-color-8;
+}
+
+@include responsive(768px) {
+  section.partner {
+    display: none;
+  }
+
+  footer {
+    background: $neutral-color-3;
+    color: $white-color;
+
+    .up {
+      bottom: 260px;
+    }
+
+    .logo-container {
+      a {
+        div {
+          span {
+            color: $white-color;
+          }
+        }
+      }
+    }
+  }
+}

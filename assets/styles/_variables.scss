@@ -1,0 +1,72 @@
+/* Primary Colors */
+$primary-color-1: #ec5242;
+$primary-color-2: #a01506;
+$primary-color-3: #f1786b54;
+
+/* Accent Colors */
+$accent-color-1: #272a31;
+$accent-color-2: #242e44;
+$accent-color-3: #152853;
+
+/* Neutral Colors */
+$neutral-color-1: #e7e5e5;
+$neutral-color-2: #afaeae18;
+$neutral-color-3: #404346;
+$neutral-color-4: #3e3e3e;
+$neutral-color-5: #676867;
+$neutral-color-6: #454645;
+$neutral-color-7: #f3f2f3;
+$neutral-color-8: #f8f9f9;
+$neutral-color-9: #b3b3b2;
+$white-color: #fff;
+
+/* button variables */
+$button-color1: linear-gradient(to right, $primary-color-1 50%, white 50%);
+$button-color2: linear-gradient(to right, white 50%, $primary-color-1 50%);
+$button-border1: solid 2px $primary-color-1;
+$button-border2: solid 1px $neutral-color-3;
+$border-none: solid 0 $white-color;
+
+/* Grid variables */
+$grid-mobile: 1fr;
+$grid-medium: 30% 70%;
+$grid-large: repeat(2, 1fr);
+$grid-extra-large: repeat(5, 1fr);
+
+/* Box Shadows */
+$shadow-1: rgba(0, 0, 0, 0.1) 0 20px 25px -5px,
+  rgba(0, 0, 0, 0.04) 0 10px 10px -5px;
+$shadow-2: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
+$shadow-3:  #f36e5fa9 0 48px 100px 0;
+
+/* Font size stack */
+$font-size: (
+  "micro": 14px,
+  "mini": 18px,
+  "smallest": 20px,
+  "smaller":  22px,
+  "small": 24px,
+  "medium": 26px,
+  "large": 40px,
+  "larger": 48px,
+  "largest": 56px,
+);
+
+/* Font Weights Stack */
+$font-weights: (
+  "normal": 400,
+  "medium": 500,
+  "extra-medium": 600,
+  "bold": 700,
+  "bolder": 800,
+);
+
+@font-face {
+  font-family: Cocogoose;
+  src: url('../../assets/Fonts/cocogoose-pro/Cocogoose\ Pro\ Regular\ Trial.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: YM;
+  src: url('../../assets/Fonts/ym/Youth\ Memories.otf') format('truetype');
+}

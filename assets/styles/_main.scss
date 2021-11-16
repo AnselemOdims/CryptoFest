@@ -1,0 +1,279 @@
+/* Main */
+main {
+  @include position(relative, 0, unset, 0, 0);
+
+  margin: 0;
+}
+
+.intro-heading {
+  @include display(column, center, center);
+
+  text-align: center;
+  margin: 0 0 20px;
+  color: $white-color;
+
+  span {
+    @include position(relative, 0, 5px, unset, unset);
+
+    width: 7%;
+    border-bottom: solid 2px $primary-color-1;
+    padding: 4px 0;
+
+    @include responsive(768px) {
+      width: 3%;
+    }
+  }
+}
+
+section.intro {
+  font-family: Lato, monospace;
+  height: 100%;
+  padding: 30px 0 20px;
+  background:
+    url('../../assets/images/background/layer4.png')
+    no-repeat;
+  background-size: 100vw 100%;
+
+  .card-container {
+    @include display-grid($grid-mobile, 20px);
+
+    padding: 26px;
+  }
+
+  .card {
+    @include display(row, space-between, center);
+
+    margin: 0 auto;
+    padding: 10px 15px;
+    background: #4a4e5749;
+    width: 100%;
+    transition: transform ease-out 0.7s 0.08s;
+
+    &:hover {
+      border: solid 1px $white-color;
+      cursor: pointer;
+      transform: scale(1.03);
+    }
+
+    img {
+      @include dimension(40px, 40px);
+    }
+
+    p {
+      width: 60%;
+      color: $white-color;
+      line-height: 20px;
+      font-size: 12px;
+    }
+
+    h4 {
+      color: $primary-color-1;
+      font-size: font($font-size, micro);
+      margin: auto 10px;
+    }
+
+    .intro-video {
+      a {
+        text-decoration: underline;
+        color: $primary-color-1;
+        font-weight: bold;
+      }
+    }
+
+    &:last-of-type {
+      h4 {
+        margin: auto 0 auto 20px;
+      }
+    }
+  }
+
+  .program {
+    display: none;
+  }
+
+  button {
+    @extend .headline-button;
+
+    @include dimension(unset, 70px);
+
+    background: $button-color2;
+    margin: 0 auto;
+
+    @include buttons($border-none, $white-color, $shadow-2);
+
+    &:hover {
+      background-position: left bottom;
+      color: $primary-color-1;
+      border: $button-border1;
+    }
+  }
+
+  @include responsive(768px) {
+    padding: 50px 0 60px;
+
+    .card-container {
+      @include display-grid($grid-extra-large, 10px);
+
+      padding: 20px 42px;
+
+      .card {
+        @include display(column, unset, center);
+
+        padding: 10px 15px;
+        text-align: center;
+
+        h4 {
+          margin: 15px 0 10px;
+        }
+
+        p {
+          width: 100%;
+        }
+      }
+    }
+
+    button {
+      display: none;
+    }
+
+    .program {
+      @include display(row, center, center);
+
+      a {
+        color: $white-color;
+        text-decoration: underline;
+        margin: 40px 0 20px;
+      }
+    }
+  }
+
+  @include responsive(1098px) {
+    .card-container {
+      padding: 20px 130px;
+    }
+  }
+}
+
+section.partner {
+  background: $neutral-color-3;
+  padding: 20px 22px 50px;
+  font-family: Lato, monospace;
+
+  h2 {
+    color: $neutral-color-9;
+  }
+
+  .partners {
+    @include display(row, space-around, center);
+
+    width: 100%;
+    margin: 40px 0 20px;
+    flex-wrap: wrap;
+
+    .partner-img img {
+      width: 95px;
+      margin: 0 5px;
+    }
+  }
+
+  @include responsive(768px) {
+    padding: 40px 42px 50px;
+
+    .partners {
+      @include display(row, center, center);
+
+      .partner-img img {
+        margin: 0 20px;
+        width: 120px;
+      }
+    }
+  }
+}
+
+section.reminder {
+  @include position(fixed, unset, 0, unset, unset);
+  @include dimension(100vw, unset);
+  @include display(row, space-between, center);
+
+  background: $primary-color-1;
+  z-index: 1;
+  padding: 5px 3px;
+  font-family: Lato, monospace;
+
+  div {
+    @include display(row, space-between, center);
+
+    width: 60%;
+
+    .time {
+      @include display(column, center, center);
+
+      width: 50px;
+
+      h6 {
+        margin: 0 3px 3px;
+        background: $white-color;
+        color: red;
+        font-size: font($font-size, smaller);
+        padding: 5px 10px;
+        box-shadow: $shadow-1;
+        font-weight: font($font-weights, extra-medium);
+      }
+
+      small {
+        font-size: 12px;
+        color: $white-color;
+      }
+    }
+  }
+
+  span {
+    font-size: 12px;
+    width: 40%;
+    color: $white-color;
+    font-weight: font($font-weights, bolder);
+  }
+
+  @include responsive(550px) {
+    & {
+      padding: 5px 20px;
+
+      div {
+        @include display(row, center, center);
+
+        &.reminder-cards {
+          margin-left: 0;
+        }
+
+        .time {
+          width: 80px;
+        }
+      }
+    }
+  }
+
+  @include responsive(768px) {
+    padding: 5px 42px;
+
+    div {
+      @include display(row, flex-end, center);
+
+      .time {
+        width: 45px;
+        margin-left: 40px;
+
+        &:last-child {
+          margin-right: 15px;
+        }
+      }
+    }
+
+    span {
+      font-size: 16px;
+    }
+  }
+
+  @include responsive(1098px) {
+    padding: 5px 130px;
+  }
+}

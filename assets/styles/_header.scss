@@ -39,6 +39,7 @@ header {
 
   z-index: 1;
   width: 100%;
+  font-family: Lato, monospace;
 
   nav .desktop-menu,
   .top-header {
@@ -63,6 +64,128 @@ header {
       width: 30px;
     }
   }
+
+  @include responsive(768px) {
+		& {
+			nav {
+				padding: 0 30px 0 10px;
+
+				.mobile-menu {
+					display: none;
+				}
+
+				.desktop-menu {
+					display: block;
+					justify-self: flex-end;
+
+					ul {
+						@include display(row, center, center);
+						padding: 0;
+
+						a {
+							color: $neutral-color-4;
+						}
+
+						li {
+							padding: 10px;
+							margin-left: 20px;
+							a {
+								font-size: 14px;
+							}
+							&:not(:last-child) {
+								padding: 0;
+								margin-right: 10px;
+
+								a {
+									transition: border-bottom ease-out 0.5s;
+
+									&:hover {
+										border-bottom: solid 3px $primary-color-1;
+										padding-bottom: 5px;
+									}
+								}
+							}
+
+							&:last-child {
+								margin-left: 0;
+								border: solid 4px $primary-color-1;
+
+								a {
+									color: $primary-color-1;
+								}
+								@include responsive(850px) {
+									margin-left: 60px;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.top-header {
+				@include display(row, flex-end, center);
+
+				background: $neutral-color-3;
+				width: 100%;
+				padding: 6px 30px 6px 6px;
+
+				ul {
+					@include display(row, flex-end, center);
+
+					margin: 0;
+
+					li {
+						margin-left: 20px;
+
+						a {
+							color: $white-color;
+							font-size: 12px;
+
+							img {
+								width: 14px;
+								margin-top: 3px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+  @include responsive(1098px) {
+		.top-header {
+			padding-right: 100px;
+		}
+
+		nav {
+			padding: 0 100px;
+
+			.desktop-menu {
+				ul {
+					display: flex;
+					padding: 0;
+					margin-left: 0;
+
+					li {
+						margin: 0;
+
+						&:not(:last-child) {
+							margin-right: 40px;
+						}
+
+						&:last-child {
+							margin-left: 50px;
+							border: solid 4px $primary-color-1;
+
+							a {
+								color: $primary-color-1;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 .hamburger-menu {
@@ -100,4 +223,10 @@ header {
       }
     }
   }
+
+  @include responsive(768px) {
+		& {
+			display: none;
+		}
+	}
 }

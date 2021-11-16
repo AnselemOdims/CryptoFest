@@ -550,6 +550,7 @@ header {
   flex-direction: column;
   z-index: 1;
   width: 100%;
+  font-family: Lato, monospace;
 }
 header nav .desktop-menu,
 header .top-header {
@@ -576,6 +577,113 @@ header nav .mobile-menu {
 }
 header nav .mobile-menu img {
   width: 30px;
+}
+@media (min-width: 768px) {
+  header nav {
+    padding: 0 30px 0 10px;
+  }
+  header nav .mobile-menu {
+    display: none;
+  }
+  header nav .desktop-menu {
+    display: block;
+    justify-self: flex-end;
+  }
+  header nav .desktop-menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 0;
+  }
+  header nav .desktop-menu ul a {
+    color: #3e3e3e;
+  }
+  header nav .desktop-menu ul li {
+    padding: 10px;
+    margin-left: 20px;
+  }
+  header nav .desktop-menu ul li a {
+    font-size: 14px;
+  }
+  header nav .desktop-menu ul li:not(:last-child) {
+    padding: 0;
+    margin-right: 10px;
+  }
+  header nav .desktop-menu ul li:not(:last-child) a {
+    transition: border-bottom ease-out 0.5s;
+  }
+  header nav .desktop-menu ul li:not(:last-child) a:hover {
+    border-bottom: solid 3px #ec5242;
+    padding-bottom: 5px;
+  }
+  header nav .desktop-menu ul li:last-child {
+    margin-left: 0;
+    border: solid 4px #ec5242;
+  }
+  header nav .desktop-menu ul li:last-child a {
+    color: #ec5242;
+  }
+}
+@media (min-width: 768px) and (min-width: 850px) {
+  header nav .desktop-menu ul li:last-child {
+    margin-left: 60px;
+  }
+}
+@media (min-width: 768px) {
+  header .top-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    background: #404346;
+    width: 100%;
+    padding: 6px 30px 6px 6px;
+  }
+  header .top-header ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    margin: 0;
+  }
+  header .top-header ul li {
+    margin-left: 20px;
+  }
+  header .top-header ul li a {
+    color: #fff;
+    font-size: 12px;
+  }
+  header .top-header ul li a img {
+    width: 14px;
+    margin-top: 3px;
+  }
+}
+@media (min-width: 1098px) {
+  header .top-header {
+    padding-right: 100px;
+  }
+  header nav {
+    padding: 0 100px;
+  }
+  header nav .desktop-menu ul {
+    display: flex;
+    padding: 0;
+    margin-left: 0;
+  }
+  header nav .desktop-menu ul li {
+    margin: 0;
+  }
+  header nav .desktop-menu ul li:not(:last-child) {
+    margin-right: 40px;
+  }
+  header nav .desktop-menu ul li:last-child {
+    margin-left: 50px;
+    border: solid 4px #ec5242;
+  }
+  header nav .desktop-menu ul li:last-child a {
+    color: #ec5242;
+  }
 }
 
 .hamburger-menu {
@@ -617,6 +725,11 @@ header nav .mobile-menu img {
   font-size: 32px;
   line-height: 44px;
   color: #242e44;
+}
+@media (min-width: 768px) {
+  .hamburger-menu {
+    display: none;
+  }
 }
 
 /* Headline Section */

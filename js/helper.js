@@ -86,7 +86,7 @@ export const formHandler = () => {
           alt="google icon"/></a>
           <a href=""><img src="https://img.icons8.com/color/48/000000/twitter--v1.png" alt="twitter icon"/></a>
           <a href=""><img
-            src="assets/images/icons/icon-facebook.svg" alt="facebook icon"
+            src="assets/images/icons/form-facebook.svg" alt="facebook icon"
         /></a>
           <a href=""><img src="https://img.icons8.com/fluency/48/000000/github.png" alt="github icon"/></a>
           <a href=""><i class="fab fa-bitcoin"></i></a>

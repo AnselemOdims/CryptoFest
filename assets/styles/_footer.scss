@@ -8,7 +8,6 @@ footer {
     right: 26px;
     background: $primary-color-1;
     padding: 10px 15px;
-    // border-radius: 50%;
   }
 
   .logo-container {
@@ -17,6 +16,10 @@ footer {
 
     img {
       width: 35px;
+
+      @include responsive(768px){
+        width: 50px;
+      };
     }
 
     a {
@@ -33,6 +36,16 @@ footer {
           &:last-child {
             font-size: 11px;
           }
+
+          @include responsive(768px){
+            &:first-child {
+            font-size: 30px
+            }
+
+            &:last-child {
+              font-size: 12px;
+            }
+          };
         }
       }
     }
@@ -49,6 +62,26 @@ footer {
 
     p {
       font-size: 10px;
+    }
+  }
+
+  @include responsive(768px){
+    padding: 20px 42px 80px;
+
+    .rights {
+      width: 60%;
+
+      h6 {
+        font-size: 12px;
+      }
+    }
+  }
+
+  @include responsive(1098px){
+    padding: 20px 130px 80px;
+
+    .rights {
+      width: 60%;
     }
   }
 }

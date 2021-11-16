@@ -1375,6 +1375,11 @@ footer .logo-container {
 footer .logo-container img {
   width: 35px;
 }
+@media (min-width: 768px) {
+  footer .logo-container img {
+    width: 50px;
+  }
+}
 footer .logo-container a {
   justify-content: unset;
 }
@@ -1387,6 +1392,14 @@ footer .logo-container a div span:first-child {
 footer .logo-container a div span:last-child {
   font-size: 11px;
 }
+@media (min-width: 768px) {
+  footer .logo-container a div span:first-child {
+    font-size: 30px;
+  }
+  footer .logo-container a div span:last-child {
+    font-size: 12px;
+  }
+}
 footer .rights {
   width: 50%;
   margin-top: 14px;
@@ -1397,6 +1410,25 @@ footer .rights h6 {
 }
 footer .rights p {
   font-size: 10px;
+}
+@media (min-width: 768px) {
+  footer {
+    padding: 20px 42px 80px;
+  }
+  footer .rights {
+    width: 60%;
+  }
+  footer .rights h6 {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1098px) {
+  footer {
+    padding: 20px 130px 80px;
+  }
+  footer .rights {
+    width: 60%;
+  }
 }
 
 /* General page settings */

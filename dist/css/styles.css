@@ -1270,6 +1270,21 @@ section.partner .partners .partner-img img {
   width: 95px;
   margin: 0 5px;
 }
+@media (min-width: 768px) {
+  section.partner {
+    padding: 40px 42px 50px;
+  }
+  section.partner .partners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  section.partner .partners .partner-img img {
+    margin: 0 20px;
+    width: 120px;
+  }
+}
 
 section.reminder {
   position: fixed;

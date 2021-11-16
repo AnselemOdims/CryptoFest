@@ -250,4 +250,29 @@ section.reminder {
       }
     }
   }
+
+  @include responsive(768px){
+    padding: 5px 42px;
+
+    div {
+      @include display(row, flex-end, center);
+
+      .time {
+        width: 45px;
+        margin-left: 40px;
+
+        &:last-child {
+          margin-right: 15px
+        }
+      }
+    }
+
+    span {
+      font-size: 16px;
+    }
+  }
+
+  @include responsive(1098px){
+    padding: 5px 130px;
+  }
 }

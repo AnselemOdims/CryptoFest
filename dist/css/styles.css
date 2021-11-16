@@ -1353,6 +1353,32 @@ section.reminder span {
     width: 80px;
   }
 }
+@media (min-width: 768px) {
+  section.reminder {
+    padding: 5px 42px;
+  }
+  section.reminder div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+  }
+  section.reminder div .time {
+    width: 45px;
+    margin-left: 40px;
+  }
+  section.reminder div .time:last-child {
+    margin-right: 15px;
+  }
+  section.reminder span {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1098px) {
+  section.reminder {
+    padding: 5px 130px;
+  }
+}
 
 footer {
   display: flex;

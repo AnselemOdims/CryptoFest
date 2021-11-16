@@ -27,7 +27,7 @@ Additional description about the project and its features.
 
 ## Live Demo
 
-[View Live Demo]()
+[View Live Demo](https://anselemodims.github.io/CryptoFest/)
 
 ## Getting Started
 

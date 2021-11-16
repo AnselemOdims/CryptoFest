@@ -845,6 +845,38 @@ header nav .mobile-menu img {
     width: 90%;
   }
 }
+@media (min-width: 768px) {
+  .headline-details {
+    position: absolute;
+    top: 25px;
+    bottom: 50px;
+    left: 45px;
+    right: 50px;
+  }
+  .headline-details h1 {
+    font-size: 56px;
+  }
+}
+@media (min-width: 1024px) {
+  .headline-details {
+    top: 100px;
+  }
+  .headline-details h1 {
+    font-size: 56px;
+  }
+}
+@media (min-width: 1098px) {
+  .headline-details {
+    position: absolute;
+    top: 60px;
+    bottom: 50px;
+    left: 130px;
+    right: 50px;
+  }
+  .headline-details h1 {
+    font-size: 56px;
+  }
+}
 
 section.hero {
   height: 75vh;

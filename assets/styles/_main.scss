@@ -75,6 +75,12 @@ section.intro {
         font-weight: bold;
       }
     }
+
+    &:last-of-type {
+      h4 {
+        margin: auto 0 auto 20px;
+      }
+    }
   }
 
   .program {

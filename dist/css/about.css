@@ -8,7 +8,7 @@
 /* Font Weights Stack */
 @font-face {
   font-family: Cocogoose;
-  src: url("../../assets/Fonts/Cocogoose/Cocogoose Pro Light-trial.ttf") format("truetype");
+  src: url("../../assets/Fonts/cocogoose-pro/Cocogoose Pro Regular Trial.ttf") format("truetype");
 }
 @font-face {
   font-family: YM;
@@ -41,7 +41,7 @@ section.headline-section div .headline-details.details {
   text-align: center;
 }
 section.headline-section div .headline-details.details h1 {
-  font-size: 35px;
+  font-size: 37px;
   text-align: center;
   margin: -3px 0;
 }

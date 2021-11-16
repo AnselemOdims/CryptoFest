@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pontano+Sans&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap");
 /* Primary Colors */
 /* Accent Colors */
 /* Neutral Colors */
@@ -10,7 +9,7 @@
 /* Font Weights Stack */
 @font-face {
   font-family: Cocogoose;
-  src: url("../../assets/Fonts/Cocogoose/Cocogoose Pro Light-trial.ttf") format("truetype");
+  src: url("../../assets/Fonts/cocogoose-pro/Cocogoose Pro Regular Trial.ttf") format("truetype");
 }
 @font-face {
   font-family: YM;
@@ -674,9 +673,8 @@ header nav .mobile-menu img {
   color: #ec5242;
 }
 .headline-details p:last-of-type {
-  font-family: Cocogoose;
-  src: url("../../assets/Fonts/Cocogoose/Cocogoose Pro Light-trial.ttf");
   margin: 15px 0;
+  font-weight: 400;
 }
 .headline-details h1 {
   font-family: Poppins, sans-serif;
@@ -766,7 +764,7 @@ section .headline.about {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(151, 150, 150, 0.226) url("../../assets/images/background/background2.png") no-repeat;
+  background: rgba(151, 150, 150, 0.226) url("../../assets/images/background/background1.png") no-repeat;
   background-size: 100vw 100%;
   padding: 20px;
   height: 78vh;
@@ -988,6 +986,9 @@ section.intro .card .intro-video a {
   color: #ec5242;
   font-weight: bold;
 }
+section.intro .card:last-of-type h4 {
+  margin: auto 0 auto 20px;
+}
 section.intro .program {
   display: none;
 }
@@ -1109,8 +1110,16 @@ footer {
   flex-direction: row;
   padding: 20px 24px 80px 0;
 }
+footer .up {
+  position: absolute;
+  bottom: 160px;
+  right: 26px;
+  background: #ec5242;
+  padding: 10px 15px;
+}
 footer .logo-container {
   width: 30%;
+  top: 17px;
 }
 footer .logo-container img {
   width: 35px;

@@ -18,6 +18,10 @@ main {
     width: 7%;
     border-bottom: solid 2px $primary-color-1;
     padding: 4px 0;
+
+    @include responsive(768px){
+      width: 3%;
+    }
   }
 }
 
@@ -52,7 +56,7 @@ section.intro {
     }
 
     img {
-      width: 40px;
+      @include dimension(40px, 40px);
     }
 
     p {
@@ -103,6 +107,50 @@ section.intro {
       border: $button-border1;
     }
   }
+
+  @include responsive(768px){
+    padding: 50px 0 60px;
+
+    .card-container {
+      @include display-grid($grid-extra-large, 10px);
+
+      padding: 20px 42px;
+
+      .card {
+        @include display(column, unset, center);
+
+        padding: 10px 15px;
+        text-align: center;
+
+        h4 {
+          margin: 15px 0 10px;
+        }
+
+        p {
+          width: 100%
+        }
+      }
+    }
+
+    button {
+      display: none
+    }
+    .program {
+      @include display(row, center, center);
+
+      a {
+        color: $white-color;
+        text-decoration: underline;
+        margin: 40px 0 20px;
+      }
+    }
+};
+
+@include responsive(1098px){
+  .card-container {
+    padding: 20px 130px;
+  }
+};
 }
 
 section.partner {

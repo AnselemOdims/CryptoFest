@@ -1082,6 +1082,11 @@ main {
   border-bottom: solid 2px #ec5242;
   padding: 4px 0;
 }
+@media (min-width: 768px) {
+  .intro-heading span {
+    width: 3%;
+  }
+}
 
 section.intro {
   font-family: Lato, monospace;
@@ -1114,6 +1119,7 @@ section.intro .card:hover {
 }
 section.intro .card img {
   width: 40px;
+  height: 40px;
 }
 section.intro .card p {
   width: 60%;
@@ -1156,6 +1162,50 @@ section.intro button:hover {
   background-position: left bottom;
   color: #ec5242;
   border: solid 2px #ec5242;
+}
+@media (min-width: 768px) {
+  section.intro {
+    padding: 50px 0 60px;
+  }
+  section.intro .card-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding: 20px 42px;
+  }
+  section.intro .card-container .card {
+    display: flex;
+    justify-content: unset;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 15px;
+    text-align: center;
+  }
+  section.intro .card-container .card h4 {
+    margin: 15px 0 10px;
+  }
+  section.intro .card-container .card p {
+    width: 100%;
+  }
+  section.intro button {
+    display: none;
+  }
+  section.intro .program {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  section.intro .program a {
+    color: #fff;
+    text-decoration: underline;
+    margin: 40px 0 20px;
+  }
+}
+@media (min-width: 1098px) {
+  section.intro .card-container {
+    padding: 20px 130px;
+  }
 }
 
 section.partner {

@@ -388,6 +388,16 @@ template {
   right: 0;
   width: 90%;
 }
+@media (min-width: 768px) {
+  .modal-container .video iframe {
+    position: fixed;
+    top: 20%;
+    bottom: 10%;
+    left: unset;
+    right: 25%;
+    width: 50%;
+  }
+}
 .modal-container .modal {
   display: flex;
   justify-content: center;

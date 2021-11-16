@@ -22,6 +22,14 @@
 
       width: 90%;
     }
+
+    @include responsive(768px) {
+      iframe {
+        @include position(fixed, 20%, 10%, unset, 25%);
+
+        width: 50%;
+      }
+    }
   }
 
   .modal {

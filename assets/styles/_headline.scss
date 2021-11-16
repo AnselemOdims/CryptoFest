@@ -112,33 +112,34 @@
   }
 
   @include responsive(768px) {
-		& {
-			@include position(absolute, 25px, 50px, 45px, 50px);
+    & {
+      @include position(absolute, 25px, 50px, 45px, 50px);
 
-			h1 {
-				font-size: 56px;
-			}
-		}
-	}
+      h1 {
+        font-size: 56px;
+      }
+    }
+  }
 
-	@include responsive(1024px) {
-		& {
-			top: 100px;
+  @include responsive(1024px) {
+    & {
+      top: 100px;
 
-			h1 {
-				font-size: 56px;
-			}
-		}
-	}
-	@include responsive(1098px) {
-		& {
-			@include position(absolute, 60px, 50px, 130px, 50px);
+      h1 {
+        font-size: 56px;
+      }
+    }
+  }
 
-			h1 {
-				font-size: 56px;
-			}
-		}
-	}
+  @include responsive(1098px) {
+    & {
+      @include position(absolute, 60px, 50px, 130px, 50px);
+
+      h1 {
+        font-size: 56px;
+      }
+    }
+  }
 }
 
 section {

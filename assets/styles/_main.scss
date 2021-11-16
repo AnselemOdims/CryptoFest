@@ -19,7 +19,7 @@ main {
     border-bottom: solid 2px $primary-color-1;
     padding: 4px 0;
 
-    @include responsive(768px){
+    @include responsive(768px) {
       width: 3%;
     }
   }
@@ -30,8 +30,8 @@ section.intro {
   height: 100%;
   padding: 30px 0 20px;
   background:
-          url('../../assets/images/background/layer4.png')
-          no-repeat;
+    url('../../assets/images/background/layer4.png')
+    no-repeat;
   background-size: 100vw 100%;
 
   .card-container {
@@ -108,7 +108,7 @@ section.intro {
     }
   }
 
-  @include responsive(768px){
+  @include responsive(768px) {
     padding: 50px 0 60px;
 
     .card-container {
@@ -127,14 +127,15 @@ section.intro {
         }
 
         p {
-          width: 100%
+          width: 100%;
         }
       }
     }
 
     button {
-      display: none
+      display: none;
     }
+
     .program {
       @include display(row, center, center);
 
@@ -144,13 +145,13 @@ section.intro {
         margin: 40px 0 20px;
       }
     }
-};
-
-@include responsive(1098px){
-  .card-container {
-    padding: 20px 130px;
   }
-};
+
+  @include responsive(1098px) {
+    .card-container {
+      padding: 20px 130px;
+    }
+  }
 }
 
 section.partner {
@@ -175,7 +176,7 @@ section.partner {
     }
   }
 
-  @include responsive(768px){
+  @include responsive(768px) {
     padding: 40px 42px 50px;
 
     .partners {
@@ -251,7 +252,7 @@ section.reminder {
     }
   }
 
-  @include responsive(768px){
+  @include responsive(768px) {
     padding: 5px 42px;
 
     div {
@@ -262,7 +263,7 @@ section.reminder {
         margin-left: 40px;
 
         &:last-child {
-          margin-right: 15px
+          margin-right: 15px;
         }
       }
     }
@@ -272,7 +273,7 @@ section.reminder {
     }
   }
 
-  @include responsive(1098px){
+  @include responsive(1098px) {
     padding: 5px 130px;
   }
 }

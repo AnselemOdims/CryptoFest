@@ -107,7 +107,7 @@ section.speakers {
     }
   }
 
-  @include responsive(768px){
+  @include responsive(768px) {
     padding: 20px 42px;
 
     h2 {
@@ -119,13 +119,12 @@ section.speakers {
 
       li.card {
         @include display(row, space-between, unset);
-  
-        &:nth-child(2){
-        margin-top: 24px;
+
+        &:nth-child(2) {
+          margin-top: 24px;
         }
 
         .speaker-details {
-
           hr {
             width: 5%;
             margin: 7px 0;
@@ -133,12 +132,13 @@ section.speakers {
         }
       }
     }
+
     button {
       display: none;
     }
   }
 
-  @include responsive(1098px){
+  @include responsive(1098px) {
     padding: 20px 130px;
   }
 }

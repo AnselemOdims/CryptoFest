@@ -14,6 +14,139 @@
   font-family: YM;
   src: url("../../assets/Fonts/ym/Youth Memories.otf") format("truetype");
 }
+section.logo-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: Lato, monospace;
+  padding: 45px 20px 50px;
+  text-align: center;
+  background: #fff;
+}
+section.logo-section h2 {
+  font-weight: 500;
+  width: 60%;
+}
+section.logo-section p {
+  font-size: 12px;
+  line-height: 19px;
+}
+section.logo-section .headline-card {
+  border: solid 1px #dad6d6;
+  padding: 30px 100px;
+  margin: 0 auto;
+  transition: box-shadow ease-out 0.5s 0.1s;
+  width: 322px;
+}
+section.logo-section .headline-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 5px;
+  cursor: pointer;
+}
+section.logo-section .headline-card img {
+  width: 65px;
+}
+section.logo-section .headline-card a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  margin: 0;
+  color: #272a31;
+}
+section.logo-section .headline-card a div span:first-child {
+  font-family: YM;
+  src: url("../../assets/Fonts/ym/Youth Memories.otf");
+  font-size: 36px;
+  font-weight: 500;
+}
+section.logo-section .headline-card a div span:last-child {
+  font-size: 18px;
+}
+section.logo-section.past {
+  border-top: solid 1px #c7c5c5;
+}
+section.logo-section.past h2 {
+  width: 85%;
+}
+section.logo-section.past .headline-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 91%;
+}
+section.logo-section.past .headline-container .headline-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 250px;
+  padding: 0;
+  margin: 20px auto;
+  box-shadow: none;
+  color: #fff;
+}
+section.logo-section.past .headline-container .headline-card:first-of-type {
+  background: url("../../assets/images/background/headway-F2KRf_QfCqw-unsplash.jpg") no-repeat;
+  background-size: 100vw 100%;
+}
+section.logo-section.past .headline-container .headline-card:last-of-type {
+  background: url("../../assets/images/background/alexandre-pellaes-6vAjp0pscX0-unsplash.jpg") no-repeat;
+  background-size: 100vw 100%;
+}
+section.logo-section.past .headline-container .headline-card div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #ec200e73;
+  width: 100%;
+  height: 100%;
+}
+section.logo-section.past .headline-container .headline-card h3 {
+  font-size: 40px;
+  margin: 0;
+}
+section.logo-section.past .headline-container .headline-card p {
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  section.logo-section .hide-p {
+    display: block;
+  }
+  section.logo-section p {
+    width: 50%;
+    margin-bottom: 25px;
+  }
+  section.logo-section hr {
+    width: 2%;
+  }
+  section.logo-section .headline-card {
+    width: 488px;
+    height: 177px;
+  }
+  section.logo-section .headline-card a {
+    margin-top: 20px;
+  }
+  section.logo-section.past .headline-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  section.logo-section.past .headline-container .headline-card {
+    width: 342px;
+    height: 191px;
+    margin: 10px;
+  }
+  section.logo-section.past h2 {
+    margin-top: 0;
+  }
+}
+
 .logo-section hr {
   border: none;
   width: 7%;
@@ -120,139 +253,6 @@ section.headline-section div hr {
   }
   section.headline-section div hr {
     width: 2%;
-  }
-}
-
-section.logo-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-family: Lato, monospace;
-  padding: 45px 20px 50px;
-  text-align: center;
-  background: #fff;
-}
-section.logo-section h2 {
-  font-weight: 500;
-  width: 60%;
-}
-section.logo-section p {
-  font-size: 12px;
-  line-height: 19px;
-}
-section.logo-section .headline-card {
-  border: solid 1px #dad6d6;
-  padding: 30px 100px;
-  margin: 0 auto;
-  transition: box-shadow ease-out 0.5s 0.1s;
-  width: 322px;
-}
-section.logo-section .headline-card:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 5px;
-  cursor: pointer;
-}
-section.logo-section .headline-card img {
-  width: 65px;
-}
-section.logo-section .headline-card a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  width: 100%;
-  margin: 0;
-  color: #272a31;
-}
-section.logo-section .headline-card a div span:first-child {
-  font-family: YM;
-  src: url("../../assets/Fonts/ym/Youth Memories.otf");
-  font-size: 36px;
-  font-weight: 500;
-}
-section.logo-section .headline-card a div span:last-child {
-  font-size: 18px;
-}
-section.logo-section.past {
-  border-top: solid 1px #c7c5c5;
-}
-section.logo-section.past h2 {
-  width: 85%;
-}
-section.logo-section.past div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 91%;
-}
-section.logo-section.past div .headline-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  height: 250px;
-  padding: 0;
-  margin: 20px auto;
-  box-shadow: none;
-  color: #fff;
-}
-section.logo-section.past div .headline-card:first-of-type {
-  background: url("../../assets/images/background/headway-F2KRf_QfCqw-unsplash.jpg") no-repeat;
-  background-size: 100vw 100%;
-}
-section.logo-section.past div .headline-card:last-of-type {
-  background: url("../../assets/images/background/alexandre-pellaes-6vAjp0pscX0-unsplash.jpg") no-repeat;
-  background-size: 100vw 100%;
-}
-section.logo-section.past div .headline-card div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: #ec200e73;
-  width: 100%;
-  height: 100%;
-}
-section.logo-section.past div .headline-card h3 {
-  font-size: 40px;
-  margin: 0;
-}
-section.logo-section.past div .headline-card p {
-  font-weight: 500;
-}
-@media (min-width: 768px) {
-  section.logo-section .hide-p {
-    display: block;
-  }
-  section.logo-section p {
-    width: 50%;
-    margin-bottom: 25px;
-  }
-  section.logo-section hr {
-    width: 2%;
-  }
-  section.logo-section .headline-card {
-    width: 488px;
-    height: 177px;
-  }
-  section.logo-section .headline-card a {
-    margin-top: 20px;
-  }
-  section.logo-section.past div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-  }
-  section.logo-section.past div .headline-card {
-    width: 342px;
-    height: 191px;
-    margin: 10px;
-  }
-  section.logo-section.past h2 {
-    margin-top: 0;
   }
 }
 

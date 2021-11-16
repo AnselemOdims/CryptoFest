@@ -581,6 +581,33 @@ header nav .mobile-menu img {
   width: 30px;
 }
 @media (min-width: 768px) {
+  header .top-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    background: #404346;
+    width: 100%;
+    padding: 6px 30px 6px 6px;
+  }
+  header .top-header ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    margin: 0;
+  }
+  header .top-header ul li {
+    margin-left: 20px;
+  }
+  header .top-header ul li a {
+    color: #fff;
+    font-size: 12px;
+  }
+  header .top-header ul li a img {
+    width: 14px;
+    margin-top: 3px;
+  }
   header nav {
     padding: 0 30px 0 10px;
   }
@@ -608,17 +635,6 @@ header nav .mobile-menu img {
   header nav .desktop-menu ul li a {
     font-size: 14px;
   }
-  header nav .desktop-menu ul li:not(:last-child) {
-    padding: 0;
-    margin-right: 10px;
-  }
-  header nav .desktop-menu ul li:not(:last-child) a {
-    transition: border-bottom ease-out 0.5s;
-  }
-  header nav .desktop-menu ul li:not(:last-child) a:hover {
-    border-bottom: solid 3px #ec5242;
-    padding-bottom: 5px;
-  }
   header nav .desktop-menu ul li:last-child {
     margin-left: 0;
     border: solid 4px #ec5242;
@@ -633,32 +649,16 @@ header nav .mobile-menu img {
   }
 }
 @media (min-width: 768px) {
-  header .top-header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: row;
-    background: #404346;
-    width: 100%;
-    padding: 6px 30px 6px 6px;
+  header nav .desktop-menu ul li:not(:last-child) {
+    padding: 0;
+    margin-right: 10px;
   }
-  header .top-header ul {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: row;
-    margin: 0;
+  header nav .desktop-menu ul li:not(:last-child) a {
+    transition: border-bottom ease-out 0.5s;
   }
-  header .top-header ul li {
-    margin-left: 20px;
-  }
-  header .top-header ul li a {
-    color: #fff;
-    font-size: 12px;
-  }
-  header .top-header ul li a img {
-    width: 14px;
-    margin-top: 3px;
+  header nav .desktop-menu ul li:not(:last-child) a:hover {
+    border-bottom: solid 3px #ec5242;
+    padding-bottom: 5px;
   }
 }
 @media (min-width: 1098px) {

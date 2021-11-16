@@ -21,6 +21,10 @@
   border-bottom: solid 2px #ec5242;
 }
 
+.hide-p {
+  display: none;
+}
+
 section.headline-section {
   height: 75vh;
   font-family: Lato, monospace;
@@ -125,7 +129,7 @@ section.logo-section {
   align-items: center;
   flex-direction: column;
   font-family: Lato, monospace;
-  padding: 15px 20px 50px;
+  padding: 45px 20px 50px;
   text-align: center;
   background: #fff;
 }
@@ -210,6 +214,25 @@ section.logo-section.past .headline-card h3 {
 }
 section.logo-section.past .headline-card p {
   font-weight: 500;
+}
+@media (min-width: 768px) {
+  section.logo-section .hide-p {
+    display: block;
+  }
+  section.logo-section p {
+    width: 50%;
+    margin-bottom: 25px;
+  }
+  section.logo-section hr {
+    width: 2%;
+  }
+  section.logo-section .headline-card {
+    width: 488px;
+    height: 177px;
+  }
+  section.logo-section .headline-card a {
+    margin-top: 20px;
+  }
 }
 
 footer {

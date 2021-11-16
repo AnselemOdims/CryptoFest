@@ -5,6 +5,10 @@
   @include hr;
 }
 
+.hide-p {
+  display: none;
+}
+
 section.headline-section {
   height: 75vh;
   font-family: Lato, monospace;
@@ -119,7 +123,7 @@ section.logo-section {
   @include display(column, center, center);
 
   font-family: Lato, monospace;
-  padding: 15px 20px 50px;
+  padding: 45px 20px 50px;
   text-align: center;
   background: $white-color;
 
@@ -218,6 +222,29 @@ section.logo-section {
 
       p {
         font-weight: font($font-weights, medium);
+      }
+    }
+  }
+
+  @include responsive(768px) {
+    .hide-p {
+      display: block;
+    }
+
+    p {
+      width: 50%;
+      margin-bottom: 25px;
+    }
+
+    hr {
+      width: 2%;
+    }
+
+    .headline-card {
+      @include dimension(488px, 177px);
+
+      a {
+        margin-top: 20px;
       }
     }
   }

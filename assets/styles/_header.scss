@@ -126,9 +126,14 @@ header {
               &:last-child {
                 margin-left: 0;
                 border: solid 4px $primary-color-1;
+                transition: transform ease-in 0.5s 0.5s;
 
                 a {
                   color: $primary-color-1;
+                }
+
+                &:hover {
+                  transform: rotate(360deg);
                 }
 
                 @include responsive(850px) {

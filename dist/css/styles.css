@@ -648,9 +648,13 @@ header nav .mobile-menu img {
   header nav .desktop-menu ul li:last-child {
     margin-left: 0;
     border: solid 4px #ec5242;
+    transition: transform ease-in 0.5s 0.5s;
   }
   header nav .desktop-menu ul li:last-child a {
     color: #ec5242;
+  }
+  header nav .desktop-menu ul li:last-child:hover {
+    transform: rotate(360deg);
   }
 }
 @media (min-width: 768px) and (min-width: 850px) {

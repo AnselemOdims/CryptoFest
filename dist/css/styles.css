@@ -648,7 +648,7 @@ header nav .mobile-menu img {
   header nav .desktop-menu ul li:last-child {
     margin-left: 0;
     border: solid 4px #ec5242;
-    transition: transform ease-in 0.5s 0.5s;
+    transition: transform ease-in 1s 0.1s;
   }
   header nav .desktop-menu ul li:last-child a {
     color: #ec5242;
@@ -1180,6 +1180,23 @@ main {
   }
 }
 
+@keyframes change {
+  0% {
+    opacity: 0%;
+  }
+  25% {
+    opacity: 25%;
+  }
+  50% {
+    opacity: 50%;
+  }
+  75% {
+    opacity: 75%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
 section.intro {
   font-family: Lato, monospace;
   height: 100%;
@@ -1317,6 +1334,26 @@ section.partner .partners {
   margin: 40px 0 20px;
   flex-wrap: wrap;
 }
+section.partner .partners .partner-img {
+  animation-name: change;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+section.partner .partners .partner-img.first {
+  animation-delay: 0.5s;
+}
+section.partner .partners .partner-img.second {
+  animation-delay: 0.8s;
+}
+section.partner .partners .partner-img.third {
+  animation-delay: 1.1s;
+}
+section.partner .partners .partner-img.fourth {
+  animation-delay: 1.4s;
+}
+section.partner .partners .partner-img.fifth {
+  animation-delay: 1.7s;
+}
 section.partner .partners .partner-img img {
   width: 95px;
   margin: 0 5px;
@@ -1334,6 +1371,10 @@ section.partner .partners .partner-img img {
   section.partner .partners .partner-img img {
     margin: 0 20px;
     width: 120px;
+    cursor: pointer;
+    animation-name: change;
+    animation-duration: 0.5s;
+    animation-timing-function: infinite;
   }
 }
 

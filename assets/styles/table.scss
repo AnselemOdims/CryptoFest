@@ -31,6 +31,7 @@ section {
       border-radius: 5px;
       background: #eaeaeb;
       cursor: pointer;
+      transition: background ease-out 0.8s 0.2s;
 
       &.active {
         background: $primary-color-1;
@@ -162,10 +163,16 @@ section {
           padding: 12px 17px;
           margin: 3px;
           border-radius: 3px;
+          transition: transform ease-out 0.7s 0.2s;
+          cursor: pointer;
 
           &.change {
             background: #dbf1ee;
             padding: 30px 17px;
+          }
+
+          &:hover {
+            transform: scale(1.04);
           }
 
           .bold {
@@ -211,9 +218,15 @@ section {
           background: #e2ecf7;
           border-radius: 3px;
           height: 247px;
+          transition: transform ease-out 0.7s 0.2s;
+          cursor: pointer;
 
           &.first {
             height: 170px;
+          }
+
+          &:hover {
+            transform: scale(1.04);
           }
 
           .bold {
@@ -325,7 +338,7 @@ section {
 
     @include responsive(768px) {
       & {
-        margin: 5px 10% 20px;
+        margin: 5px -4% 20px;
       }
     }
 

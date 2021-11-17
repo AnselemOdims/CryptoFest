@@ -126,7 +126,7 @@ header {
               &:last-child {
                 margin-left: 0;
                 border: solid 4px $primary-color-1;
-                transition: transform ease-in 0.5s 0.5s;
+                transition: transform ease-in 1s 0.1s;
 
                 a {
                   color: $primary-color-1;

@@ -1,4 +1,3 @@
-
 const hide = document.querySelectorAll('.hide');
 const modalContainer = document.querySelector('section.modal-container');
 
@@ -8,20 +7,20 @@ const modalContainer = document.querySelector('section.modal-container');
  * @param {blur} blur - The degree of the blur effect
  */
 const modalDisplay = (top, blur) => {
-	modalContainer.style.top = top;
-	document.querySelectorAll('main, header, .reminder').forEach((item) => {
-		item.style.filter = `blur(${blur})`;
-	});
+  modalContainer.style.top = top;
+  document.querySelectorAll('main, header, .reminder').forEach((item) => {
+    item.style.filter = `blur(${blur})`;
+  });
 };
 
 /**
  * @function formHandler
  */
 export default function formHandler() {
-	hide.forEach((el) => {
-		el.style.display = 'block';
-	});
-	modalContainer.innerHTML = `
+  hide.forEach((el) => {
+    el.style.display = 'block';
+  });
+  modalContainer.innerHTML = `
     <div class="modal">
       <div class="heading">
         <h2 class="intro-heading">Join Us<span></span></h2>
@@ -56,15 +55,15 @@ export default function formHandler() {
     </div>
     `;
 
-	modalDisplay(0, '8px');
-	document.querySelector('#name').focus();
-	document.querySelector('.modal').classList.add('show');
-	try {
-		document.querySelector('.close-modal').addEventListener('click', () => {
-			document.querySelector('.modal').classList.remove('show');
-			modalDisplay('-100vh', 0);
-		});
-	} catch (err) {
-		throw new Error();
-	}
+  modalDisplay(0, '8px');
+  document.querySelector('#name').focus();
+  document.querySelector('.modal').classList.add('show');
+  try {
+    document.querySelector('.close-modal').addEventListener('click', () => {
+      document.querySelector('.modal').classList.remove('show');
+      modalDisplay('-100vh', 0);
+    });
+  } catch (err) {
+    throw new Error();
+  }
 }

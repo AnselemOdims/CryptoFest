@@ -1,4 +1,4 @@
-import formHandler from "./form.js";
+import formHandler from './form.js';
 
 const btn = document.querySelectorAll('.btn');
 const btns = document.querySelectorAll('.buttons button');

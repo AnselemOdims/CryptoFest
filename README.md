@@ -3,6 +3,7 @@
 # Crypto Fest
 
 ## Project Demo Presentation
+
 [Loom Demo Link](https://www.loom.com/share/d46868ac76894b449377e2b04f37bd77)
 
 ## Live Demo
@@ -32,9 +33,6 @@ Additional description about the project and its features.
 - Frameworks - No Frameworks Used
 - Tools used - Git(version control), WebHint(linting tool), Stylelint(style linting), ESLint(Javascript linting)
 
-## Live Demo
-
-[View Live Demo](https://anselemodims.github.io/CryptoFest/)
 
 ## Getting Started
 

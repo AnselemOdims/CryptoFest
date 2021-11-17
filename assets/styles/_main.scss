@@ -27,19 +27,23 @@ main {
 
 @keyframes change {
   0% {
-    opacity: 0%
+    opacity: 0%;
   }
+
   25% {
-    opacity: 25%
+    opacity: 25%;
   }
+
   50% {
-    opacity: 50%
+    opacity: 50%;
   }
+
   75% {
-    opacity: 75%
+    opacity: 75%;
   }
+
   100% {
-    opacity: 100%
+    opacity: 100%;
   }
 }
 
@@ -188,7 +192,7 @@ section.partner {
     margin: 40px 0 20px;
     flex-wrap: wrap;
 
-    .partner-img{
+    .partner-img {
       animation-name: change;
       animation-duration: 5s;
       animation-iteration-count: infinite;
@@ -213,6 +217,7 @@ section.partner {
         animation-delay: 1.7s;
       }
     }
+
     .partner-img img {
       width: 95px;
       margin: 0 5px;

@@ -642,8 +642,17 @@ header nav .mobile-menu img {
     padding: 10px;
     margin-left: 20px;
   }
+  header nav .desktop-menu ul li:not(:last-child) {
+    padding: 0;
+    margin-right: 10px;
+  }
   header nav .desktop-menu ul li a {
+    transition: border-bottom ease-out 0.5s;
     font-size: 14px;
+  }
+  header nav .desktop-menu ul li a:hover {
+    border-bottom: solid 3px #ec5242;
+    padding-bottom: 5px;
   }
   header nav .desktop-menu ul li:last-child {
     margin-left: 0;
@@ -653,6 +662,9 @@ header nav .mobile-menu img {
   header nav .desktop-menu ul li:last-child a {
     color: #ec5242;
   }
+  header nav .desktop-menu ul li:last-child a:hover {
+    border-bottom: none;
+  }
   header nav .desktop-menu ul li:last-child:hover {
     transform: rotate(360deg);
   }
@@ -660,19 +672,6 @@ header nav .mobile-menu img {
 @media (min-width: 768px) and (min-width: 850px) {
   header nav .desktop-menu ul li:last-child {
     margin-left: 60px;
-  }
-}
-@media (min-width: 768px) {
-  header nav .desktop-menu ul li:not(:last-child) {
-    padding: 0;
-    margin-right: 10px;
-  }
-  header nav .desktop-menu ul li:not(:last-child) a {
-    transition: border-bottom ease-out 0.5s;
-  }
-  header nav .desktop-menu ul li:not(:last-child) a:hover {
-    border-bottom: solid 3px #ec5242;
-    padding-bottom: 5px;
   }
 }
 @media (min-width: 1098px) {

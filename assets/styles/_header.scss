@@ -119,8 +119,19 @@ header {
               padding: 10px;
               margin-left: 20px;
 
+              &:not(:last-child) {
+                padding: 0;
+                margin-right: 10px;
+              }
+
               a {
+                transition: border-bottom ease-out 0.5s;
                 font-size: 14px;
+
+                &:hover {
+                  border-bottom: solid 3px $primary-color-1;
+                  padding-bottom: 5px;
+                }
               }
 
               &:last-child {
@@ -130,6 +141,10 @@ header {
 
                 a {
                   color: $primary-color-1;
+
+                  &:hover {
+                    border-bottom: none;
+                  }
                 }
 
                 &:hover {
@@ -138,20 +153,6 @@ header {
 
                 @include responsive(850px) {
                   margin-left: 60px;
-                }
-              }
-
-              &:not(:last-child) {
-                padding: 0;
-                margin-right: 10px;
-
-                a {
-                  transition: border-bottom ease-out 0.5s;
-
-                  &:hover {
-                    border-bottom: solid 3px $primary-color-1;
-                    padding-bottom: 5px;
-                  }
                 }
               }
             }

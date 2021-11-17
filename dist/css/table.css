@@ -1570,7 +1570,8 @@ section {
   align-items: unset;
   flex-direction: column;
   padding: 0 10px;
-  background: #f0efef;
+  background: #f3f3f3;
+  font-family: Poppins, monospace;
 }
 section h2.heading {
   margin: 80px auto 50px;
@@ -1594,6 +1595,8 @@ section .buttons button {
   border: none;
   margin: 3px;
   border-radius: 5px;
+  background: #eaeaeb;
+  cursor: pointer;
 }
 section .buttons button.active {
   background: #ec5242;
@@ -1616,6 +1619,25 @@ section .schedule-details {
 section .schedule-details div {
   width: 60%;
 }
+section .icon {
+  width: 23px;
+  height: 23px;
+  padding: 5px;
+  border-radius: 50%;
+  margin-right: 7px;
+}
+section .icon.first {
+  background: #8DA1CC;
+}
+section .icon.second {
+  background: #ec5242;
+}
+section .icon.third {
+  background: #9d9af1;
+}
+section .icon.fourth {
+  background: #80d1c8;
+}
 section .schedule-lists {
   display: flex;
   justify-content: flex-end;
@@ -1624,16 +1646,35 @@ section .schedule-lists {
   margin: 0;
   padding: 20px 0 3px;
   font-size: 12px;
+  font-weight: 500;
 }
 section .schedule-lists .lists {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  border: solid 1px red;
+  border: 0.1em solid #e4e2e2;
 }
 section .schedule-lists .lists div {
-  padding: 10px;
+  padding: 10px 13px 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background: #fffefe;
+}
+@media (max-width: 768px) {
+  section .schedule-lists .lists div {
+    padding: 9px;
+    font-size: 10px;
+  }
+  section .schedule-lists .lists div img {
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
 }
 @media (min-width: 767px) {
   section .schedule-lists {
@@ -1642,24 +1683,27 @@ section .schedule-lists .lists div {
 }
 @media (min-width: 1240px) {
   section .schedule-lists {
-    margin: 0 13% 0 0;
+    margin: 0 6% 0 0;
   }
 }
 section div[tabindex="0"] table {
   margin: 0;
   border-collapse: collapse;
-  border: 0.1em solid #d6d6d6;
+  border: 0.1em solid #e9e7e7;
 }
 section div[tabindex="0"] tr {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #e9e8e8;
   font-size: 11px;
   margin: 10px 0;
 }
 section div[tabindex="0"] tr .time-1 {
-  padding: 12px;
+  padding: 1rem;
+  width: 20%;
+  font-size: 0.8rem;
 }
 section div[tabindex="0"] tr .td-1 {
   text-align: center;
+  font-size: 0.8rem;
 }
 section div[tabindex="0"] tr .td-2 .td-2-c {
   display: flex;
@@ -1672,8 +1716,18 @@ section div[tabindex="0"] tr .td-2 .td-2-c {
   border-radius: 3px;
 }
 section div[tabindex="0"] tr .td-2 .td-2-c.change {
-  background: #DBF1EE;
+  background: #dbf1ee;
   padding: 30px 17px;
+}
+section div[tabindex="0"] tr .td-2 .td-2-c .bold {
+  font-weight: bold;
+  margin-right: 12px;
+  font-size: 1rem;
+}
+@media (max-width: 768px) {
+  section div[tabindex="0"] tr .td-2 .td-2-c .bold {
+    font-size: 12px;
+  }
 }
 section div[tabindex="0"] tr .td-2 .td-2-c .td-2-r {
   display: flex;
@@ -1683,25 +1737,65 @@ section div[tabindex="0"] tr .td-2 .td-2-c .td-2-r {
 }
 section div[tabindex="0"] tr .td-2 .td-2-c p {
   margin: 0;
+  font-size: 1rem;
+}
+section div[tabindex="0"] tr .td-2 .td-2-c p.red {
+  color: #ec5242;
+  font-size: 0.8rem;
+}
+@media (max-width: 768px) {
+  section div[tabindex="0"] tr .td-2 .td-2-c p.red {
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  section div[tabindex="0"] tr .td-2 .td-2-c p {
+    font-size: 12px;
+  }
 }
 section div[tabindex="0"] tr .td-3 .td-3-c {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: unset;
   flex-direction: column;
   padding: 10px 17px;
   margin: 3px;
   background: #e2ecf7;
   border-radius: 3px;
+  height: 247px;
+}
+section div[tabindex="0"] tr .td-3 .td-3-c.first {
+  height: 170px;
+}
+section div[tabindex="0"] tr .td-3 .td-3-c .bold {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  font-weight: bold;
+  font-size: 1rem;
+}
+@media (max-width: 768px) {
+  section div[tabindex="0"] tr .td-3 .td-3-c .bold {
+    font-size: 12px;
+  }
 }
 section div[tabindex="0"] tr .td-3 .td-3-c.change {
-  background: #FFE2DB;
+  background: #ffe2db;
 }
 section div[tabindex="0"] tr .td-3 .td-3-c .dets {
   margin-bottom: 12px;
+  font-size: 0.8rem;
+  line-height: 18px;
+}
+@media (max-width: 768px) {
+  section div[tabindex="0"] tr .td-3 .td-3-c .dets {
+    font-size: 11px;
+  }
 }
 section div[tabindex="0"] tr .td-3 .td-3-c.p-3 {
   padding: 105px 10px;
+  height: 559px;
 }
 @media (min-width: 516px) {
   section div[tabindex="0"] tr .td-3 .td-3-c.p-3 {
@@ -1711,21 +1805,51 @@ section div[tabindex="0"] tr .td-3 .td-3-c.p-3 {
 @media (min-width: 1024px) {
   section div[tabindex="0"] tr .td-3 .td-3-c.p-3 {
     padding: 75px 10px;
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  section div[tabindex="0"] tr .td-3 .td-3-c {
+    padding: 10px;
+    width: 200px;
+  }
+  section div[tabindex="0"] tr .td-3 .td-3-c.p-3 {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 1144px) {
+  section div[tabindex="0"] tr .td-3 .td-3-c {
+    padding: 10px;
+    width: 242px;
+  }
+  section div[tabindex="0"] tr .td-3 .td-3-c.p-3 {
+    justify-content: center;
   }
 }
 section div[tabindex="0"] tr .td-3 .small {
-  font-size: 8px;
+  font-size: 0.8rem;
+}
+section div[tabindex="0"] tr .td-3 .small:first-of-type:not(.dets) {
+  color: #ec5242;
+}
+section div[tabindex="0"] tr .td-3 .small a {
+  color: #272a31;
+}
+@media (max-width: 768px) {
+  section div[tabindex="0"] tr .td-3 .small {
+    font-size: 10px;
+  }
 }
 section div[tabindex="0"] tr .td-3 .bt-details {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  font-size: 8px;
+  font-size: 0.8rem;
 }
 section [role=region][aria-labelledby][tabindex] {
   overflow: auto;
-  border: 0.1em solid #d6d6d6;
+  border: 0.1em solid #e4e2e2;
   margin: 5px 0 20px;
   background: #fff;
 }
@@ -1744,11 +1868,8 @@ section [role=region][aria-labelledby][tabindex] table {
 }
 @media (min-width: 1240px) {
   section [role=region][aria-labelledby][tabindex] {
-    margin: 5px 13% 20px;
+    margin: 5px 6% 20px;
   }
-}
-section .bold {
-  font-weight: bold;
 }
 section button.btn {
   width: unset;

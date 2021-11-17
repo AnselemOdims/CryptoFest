@@ -1,7 +1,8 @@
 import {
-  clickHandler, hamburger, intro, introHandler, btns, formHandler,
+  clickHandler, hamburger, intro, introHandler, btns,
 } from './helper.js';
 import timer from './timer.js';
+import formHandler from './form.js';
 
 // Event listener for the hamburger menu
 hamburger.addEventListener('click', clickHandler);

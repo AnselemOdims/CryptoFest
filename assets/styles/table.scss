@@ -1,0 +1,383 @@
+@import 'styles';
+
+section {
+  @include display(column, center, unset);
+
+  padding: 0 10px;
+  background: #f3f3f3;
+  font-family: Poppins, monospace;
+
+  h2.heading {
+    margin: 80px auto 50px;
+    color: red;
+
+    span {
+      width: 20px;
+    }
+  }
+
+  .buttons {
+    @include display(row, center, center);
+
+    margin: 0 7.4%;
+    flex-wrap: wrap;
+
+    button {
+      padding: 17px;
+      font-size: 12px;
+      width: 190px;
+      border: none;
+      margin: 3px;
+      border-radius: 5px;
+      background: #eaeaeb;
+      cursor: pointer;
+
+      &.active {
+        background: $primary-color-1;
+        color: $white-color;
+      }
+    }
+  }
+
+  hr {
+    width: 771px;
+    border: none;
+    border-bottom: solid 1px $neutral-color-3;
+  }
+
+  .schedule-details {
+    @include display(column, center, center);
+
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px 0;
+
+    div {
+      width: 60%;
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  .icon {
+    @include dimension(23px, 23px);
+
+    padding: 5px;
+    border-radius: 50%;
+    margin-right: 7px;
+
+    &.first {
+      background: #8da1cc;
+    }
+
+    &.second {
+      background: $primary-color-1;
+    }
+
+    &.third {
+      background: #9d9af1;
+    }
+
+    &.fourth {
+      background: #80d1c8;
+    }
+  }
+
+  .schedule-lists {
+    @include display(row, flex-end, center);
+
+    margin: 0;
+    padding: 20px 0 3px;
+    font-size: 12px;
+    font-weight: 500;
+
+    .lists {
+      @include display(row, center, center);
+
+      border: 0.1em solid #e4e2e2;
+
+      div {
+        padding: 10px 13px 10px 10px;
+
+        @include display(row, center, center);
+
+        background: rgb(255, 254, 254);
+
+        @include max-responsive(768px) {
+          padding: 9px;
+          font-size: 10px;
+
+          img {
+            @include dimension(20px, 20px);
+
+            padding: 5px;
+            border-radius: 50%;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+
+    @include responsive(767px) {
+      & {
+        margin: 0 10% 0 0;
+      }
+    }
+
+    @include responsive(1240px) {
+      & {
+        margin: 0 6% 0 0;
+      }
+    }
+  }
+
+  div[tabindex='0'] {
+    table {
+      margin: 0;
+      border-collapse: collapse;
+      border: 0.1em solid #e9e7e7;
+    }
+
+    tr {
+      border-bottom: 1px solid rgb(233, 232, 232);
+      font-size: 11px;
+      margin: 10px 0;
+
+      .time-1 {
+        padding: 1rem;
+        width: 20%;
+        font-size: 0.8rem;
+      }
+
+      .td-1 {
+        text-align: center;
+        font-size: 0.8rem;
+      }
+
+      .td-2 {
+        .td-2-c {
+          @include display(row, space-between, center);
+
+          background: #d7d6f8;
+          padding: 12px 17px;
+          margin: 3px;
+          border-radius: 3px;
+
+          &.change {
+            background: #dbf1ee;
+            padding: 30px 17px;
+          }
+
+          .bold {
+            font-weight: bold;
+            margin-right: 12px;
+            font-size: 1rem;
+
+            @include max-responsive(768px) {
+              font-size: 12px;
+            }
+          }
+
+          .td-2-r {
+            @include display(row, space-between, center);
+          }
+
+          p {
+            margin: 0;
+            font-size: 1rem;
+
+            &.red {
+              color: $primary-color-1;
+              font-size: 0.8rem;
+
+              @include max-responsive(768px) {
+                font-size: 12px;
+              }
+            }
+
+            @include max-responsive(768px) {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .td-3 {
+        .td-3-c {
+          @include display(column, space-between, unset);
+
+          padding: 10px 17px;
+          margin: 3px;
+          background: #e2ecf7;
+          border-radius: 3px;
+          height: 247px;
+
+          &.first {
+            height: 170px;
+          }
+
+          .bold {
+            @include display(row, flex-start, center);
+
+            font-weight: bold;
+            font-size: 1rem;
+
+            @include max-responsive(768px) {
+              font-size: 12px;
+            }
+          }
+
+          &.change {
+            background: #ffe2db;
+          }
+
+          .dets {
+            margin-bottom: 12px;
+            font-size: 0.8rem;
+            line-height: 18px;
+
+            @include max-responsive(768px) {
+              font-size: 11px;
+            }
+          }
+
+          &.p-3 {
+            padding: 105px 10px;
+            height: 559px;
+
+            @include responsive(516px) {
+              & {
+                padding: 90px 10px;
+              }
+            }
+
+            @include responsive(1024px) {
+              & {
+                padding: 75px 10px;
+                justify-content: center;
+              }
+            }
+          }
+
+          @include max-responsive(768px) {
+            & {
+              padding: 10px;
+              width: 200px;
+
+              &.p-3 {
+                justify-content: space-between;
+              }
+            }
+          }
+
+          @include max-responsive(1144px) {
+            & {
+              padding: 10px;
+              width: 242px;
+
+              &.p-3 {
+                justify-content: center;
+              }
+            }
+          }
+        }
+
+        .small {
+          font-size: 0.8rem;
+
+          &:first-of-type:not(.dets) {
+            color: $primary-color-1;
+          }
+
+          a {
+            color: $accent-color-1;
+          }
+
+          @include max-responsive(768px) {
+            font-size: 10px;
+          }
+        }
+
+        .bt-details {
+          @include display(row, space-between, center);
+
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+
+  [role='region'][aria-labelledby][tabindex] {
+    overflow: auto;
+    border: 0.1em solid #e4e2e2;
+    margin: 5px 0 20px;
+    background: #fff;
+
+    &:focus {
+      box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+      outline: 0.1em solid rgba(0, 0, 0, 0.1);
+    }
+
+    & table {
+      width: 100%;
+      border: none;
+    }
+
+    @include responsive(768px) {
+      & {
+        margin: 5px 10% 20px;
+      }
+    }
+
+    @include responsive(1240px) {
+      & {
+        margin: 5px 6% 20px;
+      }
+    }
+  }
+
+  button.btn {
+    @extend .headline-button;
+
+    @include dimension(unset, 70px);
+
+    background: $button-color2;
+    margin: 0 auto;
+    margin-bottom: 45px;
+
+    @include buttons($border-none, $white-color, $shadow-2);
+
+    &:hover {
+      background-position: left bottom;
+      color: $primary-color-1;
+      border: $button-border1;
+    }
+  }
+
+  @include responsive(768px) {
+    & {
+      padding: 0 50px;
+
+      .td-3-c {
+        .dets {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  @include responsive(1240px) {
+    & {
+      padding: 0 100px;
+    }
+  }
+}
+
+footer {
+  background: rgb(36, 36, 36);
+  color: $white-color;
+
+  @include responsive(1180px) {
+    padding-left: 150px;
+  }
+}

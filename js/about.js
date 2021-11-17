@@ -13,9 +13,9 @@ const clickHandler = () => {
 <ul>
   <li><a href="./index.html">Home</a></li>
   <li><a href="./schedule.html" class="schd">Program</a></li>
-  <li><a href="">Sponsor</a></li>
-  <li><a href="">News</a></li>
-  <li><a href="">Crypto Summit</a></li>
+  <li><a href="./index.html#speakers">Speakers</a></li>
+  <li><a href="./index.html#sponsors">Partners</a></li>
+  <li><a href="#">Crypto Summit</a></li>
 </ul>
 </div>
   `,

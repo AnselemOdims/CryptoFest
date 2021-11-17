@@ -119,34 +119,40 @@ header {
               padding: 10px;
               margin-left: 20px;
 
+              &:not(:last-child) {
+                padding: 0;
+                margin-right: 10px;
+              }
+
               a {
+                transition: border-bottom ease-out 0.5s;
                 font-size: 14px;
+
+                &:hover {
+                  border-bottom: solid 3px $primary-color-1;
+                  padding-bottom: 5px;
+                }
               }
 
               &:last-child {
                 margin-left: 0;
                 border: solid 4px $primary-color-1;
+                transition: transform ease-in 1s 0.1s;
 
                 a {
                   color: $primary-color-1;
+
+                  &:hover {
+                    border-bottom: none;
+                  }
+                }
+
+                &:hover {
+                  transform: rotate(360deg);
                 }
 
                 @include responsive(850px) {
                   margin-left: 60px;
-                }
-              }
-
-              &:not(:last-child) {
-                padding: 0;
-                margin-right: 10px;
-
-                a {
-                  transition: border-bottom ease-out 0.5s;
-
-                  &:hover {
-                    border-bottom: solid 3px $primary-color-1;
-                    padding-bottom: 5px;
-                  }
                 }
               }
             }

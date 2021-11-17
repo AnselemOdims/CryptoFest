@@ -18,10 +18,10 @@ export const clickHandler = () => {
   </div>
   <ul>
     <li><a href="./about.html">About</a></li>
-    <li><a href="">Program</a></li>
-    <li><a href="">Sponsor</a></li>
-    <li><a href="">News</a></li>
-    <li><a href="">Crypto Summit</a></li>
+    <li><a href="./schedule.html">Program</a></li>
+    <li><a href="#speakers">Speakers</a></li>
+    <li><a href="sponsors">Partners</a></li>
+    <li><a href="#">Crypto Summit</a></li>
   </ul>
   </div>`,
   );

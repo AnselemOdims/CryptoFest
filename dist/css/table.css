@@ -642,33 +642,36 @@ header nav .mobile-menu img {
     padding: 10px;
     margin-left: 20px;
   }
+  header nav .desktop-menu ul li:not(:last-child) {
+    padding: 0;
+    margin-right: 10px;
+  }
   header nav .desktop-menu ul li a {
+    transition: border-bottom ease-out 0.5s;
     font-size: 14px;
+  }
+  header nav .desktop-menu ul li a:hover {
+    border-bottom: solid 3px #ec5242;
+    padding-bottom: 5px;
   }
   header nav .desktop-menu ul li:last-child {
     margin-left: 0;
     border: solid 4px #ec5242;
+    transition: transform ease-in 1s 0.1s;
   }
   header nav .desktop-menu ul li:last-child a {
     color: #ec5242;
+  }
+  header nav .desktop-menu ul li:last-child a:hover {
+    border-bottom: none;
+  }
+  header nav .desktop-menu ul li:last-child:hover {
+    transform: rotate(360deg);
   }
 }
 @media (min-width: 768px) and (min-width: 850px) {
   header nav .desktop-menu ul li:last-child {
     margin-left: 60px;
-  }
-}
-@media (min-width: 768px) {
-  header nav .desktop-menu ul li:not(:last-child) {
-    padding: 0;
-    margin-right: 10px;
-  }
-  header nav .desktop-menu ul li:not(:last-child) a {
-    transition: border-bottom ease-out 0.5s;
-  }
-  header nav .desktop-menu ul li:not(:last-child) a:hover {
-    border-bottom: solid 3px #ec5242;
-    padding-bottom: 5px;
   }
 }
 @media (min-width: 1098px) {
@@ -1176,6 +1179,23 @@ main {
   }
 }
 
+@keyframes change {
+  0% {
+    opacity: 0%;
+  }
+  25% {
+    opacity: 25%;
+  }
+  50% {
+    opacity: 50%;
+  }
+  75% {
+    opacity: 75%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
 section.intro {
   font-family: Lato, monospace;
   height: 100%;
@@ -1312,6 +1332,26 @@ section.partner .partners {
   width: 100%;
   margin: 40px 0 20px;
   flex-wrap: wrap;
+}
+section.partner .partners .partner-img {
+  animation-name: change;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+section.partner .partners .partner-img.first {
+  animation-delay: 0.5s;
+}
+section.partner .partners .partner-img.second {
+  animation-delay: 0.8s;
+}
+section.partner .partners .partner-img.third {
+  animation-delay: 1.1s;
+}
+section.partner .partners .partner-img.fourth {
+  animation-delay: 1.4s;
+}
+section.partner .partners .partner-img.fifth {
+  animation-delay: 1.7s;
 }
 section.partner .partners .partner-img img {
   width: 95px;
@@ -1597,6 +1637,7 @@ section .buttons button {
   border-radius: 5px;
   background: #eaeaeb;
   cursor: pointer;
+  transition: background ease-out 0.8s 0.2s;
 }
 section .buttons button.active {
   background: #ec5242;
@@ -1716,10 +1757,15 @@ section div[tabindex="0"] tr .td-2 .td-2-c {
   padding: 12px 17px;
   margin: 3px;
   border-radius: 3px;
+  transition: transform ease-out 0.7s 0.2s;
+  cursor: pointer;
 }
 section div[tabindex="0"] tr .td-2 .td-2-c.change {
   background: #dbf1ee;
   padding: 30px 17px;
+}
+section div[tabindex="0"] tr .td-2 .td-2-c:hover {
+  transform: scale(1.04);
 }
 section div[tabindex="0"] tr .td-2 .td-2-c .bold {
   font-weight: bold;
@@ -1765,9 +1811,14 @@ section div[tabindex="0"] tr .td-3 .td-3-c {
   background: #e2ecf7;
   border-radius: 3px;
   height: 247px;
+  transition: transform ease-out 0.7s 0.2s;
+  cursor: pointer;
 }
 section div[tabindex="0"] tr .td-3 .td-3-c.first {
   height: 170px;
+}
+section div[tabindex="0"] tr .td-3 .td-3-c:hover {
+  transform: scale(1.04);
 }
 section div[tabindex="0"] tr .td-3 .td-3-c .bold {
   display: flex;
@@ -1865,7 +1916,7 @@ section [role=region][aria-labelledby][tabindex] table {
 }
 @media (min-width: 768px) {
   section [role=region][aria-labelledby][tabindex] {
-    margin: 5px 10% 20px;
+    margin: 5px -4% 20px;
   }
 }
 @media (min-width: 1240px) {

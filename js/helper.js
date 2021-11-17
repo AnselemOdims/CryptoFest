@@ -5,7 +5,6 @@ export const hamburger = document.querySelector('.toggle');
 export const intro = document.querySelector('.intro-video');
 export const btns = document.querySelectorAll('.btn');
 
-
 /**
  * @function clickHandler - Handles click event to open the hamburger menu
  */

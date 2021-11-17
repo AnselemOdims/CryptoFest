@@ -1618,6 +1618,8 @@ section .schedule-details {
 }
 section .schedule-details div {
   width: 60%;
+  font-size: 14px;
+  line-height: 22px;
 }
 section .icon {
   width: 23px;
@@ -1908,6 +1910,12 @@ section button.btn:hover {
 
 footer {
   background: #242424;
+  color: #fff;
+}
+@media (min-width: 1180px) {
+  footer {
+    padding-left: 150px;
+  }
 }
 
 /*# sourceMappingURL=table.css.map */

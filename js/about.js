@@ -12,7 +12,7 @@ const clickHandler = () => {
 </div>
 <ul>
   <li><a href="./index.html">Home</a></li>
-  <li><a href="">Program</a></li>
+  <li><a href="./schedule.html" class="schd">Program</a></li>
   <li><a href="">Sponsor</a></li>
   <li><a href="">News</a></li>
   <li><a href="">Crypto Summit</a></li>
@@ -21,6 +21,10 @@ const clickHandler = () => {
   `,
   );
 
+  if (document.querySelector('.sd')) {
+    document.querySelector('.schd').innerText = 'About';
+    document.querySelector('.schd').href = './about.html';
+  }
   document.querySelector('.hamburger-menu').classList.add('show');
   document.querySelector('.close').addEventListener('click', () => {
     document.querySelector('.hamburger-menu').classList.remove('show');

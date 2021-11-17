@@ -51,6 +51,8 @@ section {
 
 		div {
 			width: 60%;
+			font-size: 14px;
+			line-height: 22px;
 		}
 	}
 
@@ -363,4 +365,9 @@ section {
 
 footer {
 	background: rgb(36, 36, 36);
+	color: $white-color;
+
+	@include responsive(1180px){
+		padding-left: 150px;
+	}
 }

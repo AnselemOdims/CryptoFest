@@ -1371,10 +1371,6 @@ section.partner .partners .partner-img img {
   section.partner .partners .partner-img img {
     margin: 0 20px;
     width: 120px;
-    cursor: pointer;
-    animation-name: change;
-    animation-duration: 0.5s;
-    animation-timing-function: infinite;
   }
 }
 

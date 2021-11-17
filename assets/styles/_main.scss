@@ -228,15 +228,6 @@ section.partner {
       .partner-img img {
         margin: 0 20px;
         width: 120px;
-        // transition: transform ease-out 0.7s 0.1s;
-        cursor: pointer;
-        animation-name: change;
-        animation-duration: 0.5s;
-        animation-timing-function: infinite;
-
-        // &:hover {
-        //   transform: scale(1.1);
-        // }
       }
     }
   }

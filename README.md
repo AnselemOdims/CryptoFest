@@ -12,17 +12,8 @@
 
 >Complete Project Screenshots
 
-### Mobile Page
-![screenshot](assets/images/screenshots/small.png)
-
-### Hamburger menu
-![screenshot](assets/images/screenshots/hamburger.png)
-
-### Popup Form
-![screenshot](assets/images/screenshots/form.png)
-
-### About Pge
-![screenshot](assets/images/screenshots/about.png)
+### Mini Demo
+![crypto](https://user-images.githubusercontent.com/43995830/167378177-998c6649-ff0d-4159-8d8d-d4d914bc71bf.gif)
 
 Additional description about the project and its features.
 

@@ -1,5 +1,5 @@
 export default function timer() {
-  const countDownDate = new Date('Feb 28, 2022 15:37:25').getTime();
+  const countDownDate = new Date('Feb 28, 2023 15:37:25').getTime();
   const dateNow = new Date().getTime();
   const difference = countDownDate - dateNow;
   const days = Math.floor(difference / (1000 * 60 * 60 * 24));
